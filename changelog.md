@@ -1,8 +1,8 @@
 
 
-## [Unreleased](https://github.com/devlooped/CredentialManager/tree/HEAD)
+## [v2.0.452](https://github.com/devlooped/CredentialManager/tree/v2.0.452) (2021-05-17)
 
-[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.435-beta...HEAD)
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.435-beta...v2.0.452)
 
 :sparkles: Implemented enhancements:
 
