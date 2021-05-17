@@ -1,0 +1,8 @@
+# EditorConfig is awesome:http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# ignore submodule
+[gcm/**]
+generated_code = true
