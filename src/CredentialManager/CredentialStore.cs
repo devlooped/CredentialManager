@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using Microsoft.Git.CredentialManager.Interop.MacOS;
+using Microsoft.Git.CredentialManager.Interop.Windows;
 
 namespace Microsoft.Git.CredentialManager
 {
@@ -15,10 +17,19 @@ namespace Microsoft.Git.CredentialManager
         /// Creates the right implementation of <see cref="ICredentialStore"/> 
         /// appropriate for the current platform.
         /// </summary>
-        /// <param name="appPath">Optional application path.</param>
+        /// <param name="namespace">Optional namespace to scope credential operations.</param>
         /// <returns>The <see cref="ICredentialStore"/>.</returns>
-        public static ICredentialStore Create(string? appPath = default)
-            => new CommandContext(appPath ?? GetApplicationPath()).CredentialStore;
+        public static ICredentialStore Create(string? @namespace = default)
+        {
+            if (PlatformUtils.IsWindows())
+                return new WindowsCredentialManager(@namespace);
+            else if (PlatformUtils.IsMacOS())
+                return new MacOSKeychain(@namespace);
+            else if (PlatformUtils.IsLinux())
+                return new CommandContext(GetApplicationPath()).CredentialStore;
+            else
+                throw new PlatformNotSupportedException();
+        }
 
         // See GCM's Program.cs
         static string GetApplicationPath()
