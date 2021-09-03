@@ -18,7 +18,9 @@
 	skip
 [file "assets/css/style.scss"]
 	url = https://github.com/devlooped/oss/blob/main/assets/css/style.scss
-	skip
+	sha = 9db26e2710b084d219d6355339d822f159bf5780
+	etag = f710d8919abfd5a8d00050b74ba7d0bb05c6d02e40842a3012eb96555c208504
+	weak
 [file "assets/images/sponsors.svg"]
 	url = https://github.com/devlooped/oss/blob/main/assets/images/sponsors.svg
 	skip
