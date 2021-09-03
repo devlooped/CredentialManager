@@ -122,9 +122,7 @@
 	weak
 [file "src/kzu.snk"]
 	url = https://github.com/devlooped/oss/blob/main/src/kzu.snk
-	sha = 0683ee777d7d878d4bf013d7deea352685135a05
-	etag = b8d789b5b6bea017cdcc8badcea888ad78de3e34298efca922054e9fb0e7b6b9
-	weak
+	skip
 [file "support.md"]
 	url = https://github.com/devlooped/oss/blob/main/support.md
 	sha = a0f58a6d63e48ae6e55944c556d0bc94476dc8df
