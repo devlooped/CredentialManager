@@ -1,5 +1,5 @@
-![Icon](https://raw.githubusercontent.com/devlooped/CredentialManager/main/assets/images/icon-32.png) Linq to Css
-# CredentialManager
+![Icon](https://raw.githubusercontent.com/devlooped/CredentialManager/main/assets/images/gcm.png) Git Credential Manager Lib
+============
 
 Packages the [Microsoft.Git.CredentialManager](https://github.com/microsoft/Git-Credential-Manager-Core/tree/main/src/shared/Microsoft.Git.CredentialManager) cross-platform implementation for Windows, macOS and Linux for use as a library.
 
