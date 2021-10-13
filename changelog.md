@@ -1,5 +1,13 @@
 
 
+## [v2.0.567](https://github.com/devlooped/CredentialManager/tree/v2.0.567) (2021-10-13)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.498...v2.0.567)
+
+:sparkles: Implemented enhancements:
+
+- Bump to GCM v2.0.567 [\#7](https://github.com/devlooped/CredentialManager/issues/7)
+
 ## [v2.0.498](https://github.com/devlooped/CredentialManager/tree/v2.0.498) (2021-09-03)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.452...v2.0.498)
