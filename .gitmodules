@@ -1,4 +1,4 @@
 [submodule "external/gcm"]
 	path = external/gcm
-	url = https://github.com/microsoft/Git-Credential-Manager-Core
+	url = https://github.com/GitCredentialManager/git-credential-manager
 	branch = main

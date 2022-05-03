@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using Microsoft.Git.CredentialManager.Interop.MacOS;
-using Microsoft.Git.CredentialManager.Interop.Windows;
+using GitCredentialManager;
+using GitCredentialManager.Interop.MacOS;
+using GitCredentialManager.Interop.Windows;
 
 namespace Microsoft.Git.CredentialManager
 {
