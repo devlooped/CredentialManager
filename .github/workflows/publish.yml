@@ -28,6 +28,8 @@ jobs:
         uses: ./.github/workflows/test
 
       - name: 📦 pack
+        env:
+          CustomAfterMicrosoftCommonTargets: ${{ github.workspace }}/src/NuGetize.targets
         run: dotnet pack -m:1 -p:version=${GITHUB_REF#refs/*/v}
 
       - name: 🚀 nuget
