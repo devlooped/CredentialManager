@@ -25,7 +25,7 @@ namespace GitCredentialManager
             else if (PlatformUtils.IsMacOS())
                 return new MacOSKeychain(@namespace);
             else if (PlatformUtils.IsLinux())
-                return new CommandContext(GetApplicationPath()).CredentialStore;
+                return new CommandContext(GetApplicationPath(), AppContext.BaseDirectory).CredentialStore;
             else
                 throw new PlatformNotSupportedException();
         }
