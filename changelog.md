@@ -1,6 +1,6 @@
 # Changelog
 
-## [v2.0.886](https://github.com/devlooped/CredentialManager/tree/v2.0.886) (2023-02-05)
+## [v2.0.886](https://github.com/devlooped/CredentialManager/tree/v2.0.886) (2023-02-06)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.696...v2.0.886)
 
