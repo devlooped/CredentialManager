@@ -8,8 +8,8 @@ This repository provides virtually no code whatesoever, it all comes from the GC
 
 Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
 
-[![Version](https://img.shields.io/nuget/vpre/Devlooped.CredentialManager.svg?color=royalblue)](https://www.nuget.org/packages/Devlooped.CredentialManager.Css)
-[![Downloads](https://img.shields.io/nuget/dt/Devlooped.CredentialManager.svg?color=green)](https://www.nuget.org/packages/Devlooped.CredentialManager.Css)
+[![Version](https://img.shields.io/nuget/vpre/Devlooped.CredentialManager.svg?color=royalblue)](https://www.nuget.org/packages/Devlooped.CredentialManager)
+[![Downloads](https://img.shields.io/nuget/dt/Devlooped.CredentialManager.svg?color=green)](https://www.nuget.org/packages/Devlooped.CredentialManager)
 [![License](https://img.shields.io/github/license/devlooped/CredentialManager.svg?color=blue)](https://github.com/devlooped/CredentialManager/blob/main/license.txt)
 [![Build](https://github.com/devlooped/CredentialManager/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/CredentialManager/actions)
 
