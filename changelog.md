@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.0.886.1-alpha](https://github.com/devlooped/CredentialManager/tree/v2.0.886.1-alpha) (2023-02-10)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.886...v2.0.886.1-alpha)
+
+:sparkles: Implemented enhancements:
+
+- Add sponsorlink support [\#26](https://github.com/devlooped/CredentialManager/pull/26) (@kzu)
+
 ## [v2.0.886](https://github.com/devlooped/CredentialManager/tree/v2.0.886) (2023-02-06)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.696...v2.0.886)
