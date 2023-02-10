@@ -54,6 +54,8 @@ jobs:
           fetch-depth: 0
 
       - name: 🙏 build
+        env:
+          CustomAfterMicrosoftCommonTargets: ${{ github.workspace }}/src/NuGetize.targets
         run: dotnet build -m:1 -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER"
 
       - name: ⚙ GNU grep
