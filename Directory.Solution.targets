@@ -1,0 +1,19 @@
+<Project InitialTargets="UpdateProjects">
+  <PropertyGroup>
+    <CustomAfterMicrosoftCommonTargets>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)\src\NuGetize.targets))</CustomAfterMicrosoftCommonTargets>
+    <OSPlatform Condition="$([MSBuild]::IsOsPlatform('windows'))">windows</OSPlatform>
+    <OSPlatform Condition="$([MSBuild]::IsOsPlatform('osx'))">osx</OSPlatform>
+    <OSPlatform Condition="$([MSBuild]::IsOsPlatform('linux'))">linux</OSPlatform>
+  </PropertyGroup>
+  <Target Name="UpdateProjects">
+    <ItemGroup>
+      <ProjectReference Update="@(ProjectReference)">
+        <AdditionalProperties>
+          CustomAfterMicrosoftCommonTargets=$(CustomAfterMicrosoftCommonTargets);
+          OSPlatform=$(OSPlatform);
+          %(AdditionalProperties)
+        </AdditionalProperties>
+      </ProjectReference>
+    </ItemGroup>
+  </Target>
+</Project>
