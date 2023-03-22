@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ThisAssembly.AssemblyInfo" Version="1.2.5" PrivateAssets="all" />
+    <PackageReference Include="ThisAssembly.AssemblyInfo" Version="1.2.12" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" Pack="false" />
-    <PackageReference Include="Devlooped.SponsorLink" Version="0.9.6" PackInclude="build,analyzers" PackExclude="compile,native,runtime" />
-  </ItemGroup>  
+    <PackageReference Include="Devlooped.SponsorLink" Version="0.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Devlooped.CredentialManager.targets" PackagePath="buildTransitive/Devlooped.CredentialManager.targets" />
+  </ItemGroup>
 
 </Project>

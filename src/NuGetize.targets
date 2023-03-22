@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" />
-    <PackageReference Include="NuGetizer" Version="0.9.1" />
+    <PackageReference Include="NuGetizer" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
