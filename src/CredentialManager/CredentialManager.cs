@@ -25,7 +25,7 @@ public static class CredentialManager
         else if (PlatformUtils.IsMacOS())
             return new MacOSKeychain(@namespace);
         else if (PlatformUtils.IsLinux())
-            return new CommandContext(GetApplicationPath(), AppContext.BaseDirectory).CredentialStore;
+            return new CommandContext(Array.Empty<string>()).CredentialStore;
         else
             throw new PlatformNotSupportedException();
     }
