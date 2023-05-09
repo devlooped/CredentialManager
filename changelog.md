@@ -1,5 +1,17 @@
 # Changelog
 
+## [v2.1.1](https://github.com/devlooped/CredentialManager/tree/v2.1.1) (2023-05-09)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.935...v2.1.1)
+
+:sparkles: Implemented enhancements:
+
+- Improve and cleanup package readme [\#44](https://github.com/devlooped/CredentialManager/pull/44) (@kzu)
+
+:twisted_rightwards_arrows: Merged:
+
+- Bump to GCM v2.1.1 [\#50](https://github.com/devlooped/CredentialManager/pull/50) (@kzu)
+
 ## [v2.0.935](https://github.com/devlooped/CredentialManager/tree/v2.0.935) (2023-03-22)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.886.2...v2.0.935)
