@@ -83,7 +83,6 @@ jobs:
 
   dotnet-format:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v2
