@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.1.2](https://github.com/devlooped/CredentialManager/tree/v2.1.2) (2023-06-30)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.1.1...v2.1.2)
+
+:twisted_rightwards_arrows: Merged:
+
+- Remove nuget package source mapping [\#55](https://github.com/devlooped/CredentialManager/pull/55) (@kzu)
+
 ## [v2.1.1](https://github.com/devlooped/CredentialManager/tree/v2.1.1) (2023-05-09)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.0.935...v2.1.1)
