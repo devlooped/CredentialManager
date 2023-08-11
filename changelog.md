@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.2.0](https://github.com/devlooped/CredentialManager/tree/v2.2.0) (2023-08-11)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.1.2...v2.2.0)
+
+:twisted_rightwards_arrows: Merged:
+
+- Remove current implementation of SponsorLink for now [\#61](https://github.com/devlooped/CredentialManager/pull/61) (@kzu)
+
 ## [v2.1.2](https://github.com/devlooped/CredentialManager/tree/v2.1.2) (2023-06-30)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.1.1...v2.1.2)
