@@ -7,8 +7,8 @@
 [![Build](https://github.com/devlooped/CredentialManager/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/CredentialManager/actions)
 
 <!-- #content -->
-Packages the [GitCredentialManager](https://github.com/GitCredentialManager/git-credential-manager) cross-platform implementation for 
-Windows, macOS and Linux for use as a library.
+Packages the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform implementation for 
+Windows, macOS and Linux for use as a generic credential store.
 
 Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
 
@@ -30,6 +30,7 @@ for convenience: `GitCredentialManager`.
 The optional *namespace* argument (`myapp` above) can be used to scope credential 
 operations to your own app/service.
 
+<!-- #content -->
 <!-- include https://github.com/devlooped/sponsors/raw/main/footer.md -->
 # Sponsors 
 

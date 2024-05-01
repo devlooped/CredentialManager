@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
 using GitCredentialManager.Interop.MacOS;
 using GitCredentialManager.Interop.Windows;
 
@@ -28,28 +26,5 @@ public static class CredentialManager
             return new CommandContext().CredentialStore;
         else
             throw new PlatformNotSupportedException();
-    }
-
-    // See GCM's Program.cs
-    static string GetApplicationPath()
-    {
-        // Assembly::Location always returns an empty string if the application was published as a single file
-#pragma warning disable IL3000
-        var isSingleFile = string.IsNullOrEmpty(Assembly.GetEntryAssembly()?.Location);
-#pragma warning restore IL3000
-
-        // Use "argv[0]" to get the full path to the entry executable - this is consistent across
-        // .NET Framework and .NET >= 5 when published as a single file.
-        var args = Environment.GetCommandLineArgs();
-        var candidatePath = args[0];
-
-        // If we have not been published as a single file on .NET 5 then we must strip the ".dll" file extension
-        // to get the default AppHost/SuperHost name.
-        if (!isSingleFile && Path.HasExtension(candidatePath))
-        {
-            return Path.ChangeExtension(candidatePath, null);
-        }
-
-        return candidatePath;
     }
 }
