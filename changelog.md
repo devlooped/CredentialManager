@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.5.0-alpha](https://github.com/devlooped/CredentialManager/tree/v2.5.0-alpha) (2024-05-01)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.4.1...v2.5.0-alpha)
+
+:sparkles: Implemented enhancements:
+
+- Remove submodule dependency on GCM [\#84](https://github.com/devlooped/CredentialManager/issues/84)
+- Remove GCM submodule, improve packing [\#85](https://github.com/devlooped/CredentialManager/pull/85) (@kzu)
+
 ## [v2.4.1](https://github.com/devlooped/CredentialManager/tree/v2.4.1) (2024-02-10)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.3.2...v2.4.1)
