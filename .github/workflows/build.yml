@@ -14,6 +14,8 @@ on:
       - readme.md
   pull_request:
     types: [opened, synchronize, reopened]
+  release:
+    types: [released]
 
 env:
   DOTNET_NOLOGO: true
@@ -24,13 +26,34 @@ defaults:
     shell: bash
 
 jobs:
+  version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+      label: ${{ steps.dev.outputs.label }}
+    steps:
+      - name: release
+        id: release
+        if: github.event_name == 'release'
+        run: |
+          echo "version=${GITHUB_REF#refs/*/v}" >> $GITHUB_OUTPUT
+
+      - name: dev
+        id: dev
+        if: github.event_name != 'release'
+        run: |
+          echo "label=$GITHUB_REF.$GITHUB_RUN_NUMBER" >> $GITHUB_OUTPUT
 
   build:
     name: build-${{ matrix.os }}
+    needs: version
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ 'macOS-latest', 'ubuntu-latest', 'windows-latest' ]
+    env:
+      Version: ${{ needs.version.outputs.version }}
+      VersionLabel: ${{ needs.version.outputs.label }}
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v2
@@ -39,10 +62,10 @@ jobs:
           fetch-depth: 0
 
       - name: 🙏 build
-        run: dotnet build -m:1 -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER"
+        run: dotnet build
 
       - name: 📦 pack
-        run: dotnet pack -m:1 -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER"
+        run: dotnet pack
 
       - name: ⬆️ upload
         # Only upload package from windows (can't run ILRepack on linux/macOS)
@@ -53,12 +76,15 @@ jobs:
           path: bin/*
 
   test:
-    needs: build
+    needs: [version, build]
     name: test-${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ 'macOS-latest', 'ubuntu-latest', 'windows-latest' ]
+    env:
+      Version: ${{ needs.version.outputs.version }}
+      VersionLabel: ${{ needs.version.outputs.label }}
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v2
@@ -73,7 +99,7 @@ jobs:
           path: bin
 
       - name: 🧪 test
-        run: dotnet test -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER" --nologo -bl -l:"console;verbosity=normal"
+        run: dotnet test --nologo -bl --logger:"console;verbosity=normal"
 
       - name: 🐛 logs
         uses: actions/upload-artifact@v3
@@ -100,6 +126,19 @@ jobs:
         run: |
           dotnet tool install -g --version 4.0.18 sleet 
           sleet push ./bin/**/*.nupkg --config none -f --verbose -p "SLEET_FEED_CONTAINER=nuget" -p "SLEET_FEED_CONNECTIONSTRING=${{ secrets.SLEET_CONNECTION }}" -p "SLEET_FEED_TYPE=azure" || echo "No packages found"
+
+  publish:
+    needs: test
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: pkg
+          path: bin
+      - name: 🚀 nuget
+        run: dotnet nuget push ./bin/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
 
   dotnet-format:
     runs-on: ubuntu-latest
