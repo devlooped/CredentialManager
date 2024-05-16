@@ -5,8 +5,13 @@ namespace GitCredentialManager;
 
 /// <summary>
 /// Provides the factory method <see cref="Create"/> to instantiate a 
-/// <see cref="ICredentialStore"/> appropriate for the current platform.
+/// <see cref="ICredentialStore"/> appropriate for the current platform and 
+/// optionally configured store implementation.
 /// </summary>
+/// <remarks>
+/// See https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md 
+/// for more information.
+/// </remarks>
 public static class CredentialManager
 {
     /// <summary>
@@ -25,7 +30,7 @@ public static class CredentialManager
 
     class CommandContextWrapper(CommandContext context, string? @namespace) : ICommandContext
     {
-        ISettings settings = new SettingsWrapper(context.Settings, @namespace);
+        readonly ISettings settings = new SettingsWrapper(context.Settings, @namespace);
 
         public ISettings Settings => settings;
 
