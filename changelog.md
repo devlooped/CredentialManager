@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.5.0-rc.1](https://github.com/devlooped/CredentialManager/tree/v2.5.0-rc.1) (2024-05-16)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-rc...v2.5.0-rc.1)
+
+:twisted_rightwards_arrows: Merged:
+
+- Unify build/publish workflows in a single file [\#99](https://github.com/devlooped/CredentialManager/pull/99) (@kzu)
+
 ## [v2.5.0-rc](https://github.com/devlooped/CredentialManager/tree/v2.5.0-rc) (2024-05-16)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-beta...v2.5.0-rc)
