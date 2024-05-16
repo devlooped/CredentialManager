@@ -1,5 +1,20 @@
 # Changelog
 
+## [v2.5.0-beta](https://github.com/devlooped/CredentialManager/tree/v2.5.0-beta) (2024-05-16)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-alpha...v2.5.0-beta)
+
+:sparkles: Implemented enhancements:
+
+- Convert to NS2.0 implementation, strip all unused stuff from gcmcore [\#93](https://github.com/devlooped/CredentialManager/issues/93)
+- Honor the configured credential store in GCM  [\#91](https://github.com/devlooped/CredentialManager/issues/91)
+- Convert to NS2.0 implementation [\#94](https://github.com/devlooped/CredentialManager/pull/94) (@kzu)
+- Honor the configured credential store in GCM [\#92](https://github.com/devlooped/CredentialManager/pull/92) (@kzu)
+
+:twisted_rightwards_arrows: Merged:
+
+- Update readme.md [\#96](https://github.com/devlooped/CredentialManager/pull/96) (@kzu)
+
 ## [v2.5.0-alpha](https://github.com/devlooped/CredentialManager/tree/v2.5.0-alpha) (2024-05-01)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.4.1...v2.5.0-alpha)
