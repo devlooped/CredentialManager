@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.5.0-rc](https://github.com/devlooped/CredentialManager/tree/v2.5.0-rc) (2024-05-16)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-beta...v2.5.0-rc)
+
+:sparkles: Implemented enhancements:
+
+- Test freedesktop secretservice implementation on linux [\#98](https://github.com/devlooped/CredentialManager/pull/98) (@kzu)
+
 ## [v2.5.0-beta](https://github.com/devlooped/CredentialManager/tree/v2.5.0-beta) (2024-05-16)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-alpha...v2.5.0-beta)
