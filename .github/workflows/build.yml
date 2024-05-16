@@ -17,35 +17,20 @@ on:
 
 env:
   DOTNET_NOLOGO: true
+  SLEET_CONNECTION: ${{ secrets.SLEET_CONNECTION }}
 
 defaults:
   run:
     shell: bash
 
 jobs:
-  os-matrix:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.lookup.outputs.matrix }}
-    steps:
-      - name: 🤘 checkout
-        uses: actions/checkout@v2
-        
-      - name: 🔎 lookup
-        id: lookup
-        shell: pwsh
-        run: |
-          $path = './.github/workflows/os-matrix.json'
-          $os = if (test-path $path) { cat $path } else { '["ubuntu-latest"]' }
-          echo "matrix=$os" >> $env:GITHUB_OUTPUT
 
   build:
-    needs: os-matrix
     name: build-${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ${{ fromJSON(needs.os-matrix.outputs.matrix) }}
+        os: [ 'macOS-latest', 'ubuntu-latest', 'windows-latest' ]
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v2
@@ -56,26 +41,65 @@ jobs:
       - name: 🙏 build
         run: dotnet build -m:1 -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER"
 
-      - name: ⚙ GNU grep
-        if: matrix.os == 'macOS-latest'
-        run: |
-          brew install grep
-          echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> .bash_profile
-
-      - name: 🧪 test
-        uses: ./.github/workflows/test
-
       - name: 📦 pack
         run: dotnet pack -m:1 -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER"
 
-      # Only push CI package to sleet feed if building on windows (can't run ILRepack on linux/macOS)
+      - name: ⬆️ upload
+        # Only upload package from windows (can't run ILRepack on linux/macOS)
+        if: success() && matrix.os == 'windows-latest'
+        uses: actions/upload-artifact@v3
+        with:
+          name: pkg
+          path: bin/*
+
+  test:
+    needs: build
+    name: test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ 'macOS-latest', 'ubuntu-latest', 'windows-latest' ]
+    steps:
+      - name: 🤘 checkout
+        uses: actions/checkout@v2
+        with: 
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: ⬇️ artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: pkg
+          path: bin
+
+      - name: 🧪 test
+        run: dotnet test -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER" --nologo -bl --logger:"console;verbosity=normal" -p:VSTestVerbosity=detailed
+
+      - name: 🐛 logs
+        uses: actions/upload-artifact@v3
+        if: runner.debug && always()
+        with:
+          name: test-${{ matrix.os }}
+          path: '*.binlog'
+
+  push:
+    needs: test
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: pkg
+          path: bin
+
       - name: 🚀 sleet
         env:
           SLEET_CONNECTION: ${{ secrets.SLEET_CONNECTION }}
-        if: env.SLEET_CONNECTION != '' && matrix.os == 'windows-latest'
+        if: env.SLEET_CONNECTION != ''
         run: |
           dotnet tool install -g --version 4.0.18 sleet 
-          sleet push bin --config none -f --verbose -p "SLEET_FEED_CONTAINER=nuget" -p "SLEET_FEED_CONNECTIONSTRING=${{ secrets.SLEET_CONNECTION }}" -p "SLEET_FEED_TYPE=azure" || echo "No packages found"
+          sleet push ./bin/**/*.nupkg --config none -f --verbose -p "SLEET_FEED_CONTAINER=nuget" -p "SLEET_FEED_CONNECTIONSTRING=${{ secrets.SLEET_CONNECTION }}" -p "SLEET_FEED_TYPE=azure" || echo "No packages found"
 
   dotnet-format:
     runs-on: ubuntu-latest
