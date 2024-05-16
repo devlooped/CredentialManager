@@ -1,0 +1,2 @@
+GitCredentialManager.ICredentialStore
+GitCredentialManager.ICredential
