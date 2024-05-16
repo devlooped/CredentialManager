@@ -8,7 +8,7 @@
 
 <!-- #content -->
 Packages the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
-implementation supporting Windows, macOS and Linux for use as a library with no UI or external dependencies.
+implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies.
 
 Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
 
