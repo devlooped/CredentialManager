@@ -73,7 +73,7 @@ jobs:
           path: bin
 
       - name: 🧪 test
-        run: dotnet test -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER" --nologo -bl --logger:"console;verbosity=normal" -p:VSTestVerbosity=detailed
+        run: dotnet test -p:VersionLabel="$GITHUB_REF.$GITHUB_RUN_NUMBER" --nologo -bl -l:"console;verbosity=normal"
 
       - name: 🐛 logs
         uses: actions/upload-artifact@v3

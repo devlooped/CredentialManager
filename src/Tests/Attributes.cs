@@ -55,3 +55,12 @@ public class LinuxTheoryAttribute() : OSTheoryAttribute(OSPlatform.Linux);
 public class macOSTheoryAttribute() : OSTheoryAttribute(OSPlatform.OSX);
 
 public class UnixTheoryAttribute() : OSTheoryAttribute(OSPlatform.Linux, OSPlatform.OSX);
+
+public class LocalFactAttribute : OSFactAttribute
+{
+    public LocalFactAttribute(params string[] onPlatforms) : base(onPlatforms)
+    {
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("CI")))
+            Skip = "Local-only test";
+    }
+}

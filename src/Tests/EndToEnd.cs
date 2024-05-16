@@ -38,6 +38,24 @@ public class EndToEnd : IDisposable
         Run();
     }
 
+    [LocalFact(nameof(OSPlatform.Linux))]
+    public void LinuxSecretService()
+    {
+        // To test this locally, you need:
+        //  sudo apt-get update
+        //  sudo apt install libsecret-1-0 libsecret-1-dev
+        //  sudo apt install gnome-keyring
+        //  dbus-launch --sh-syntax
+        //  export $(dbus-launch)
+        //  gnome-keyring-daemon -r -d
+
+        // Then run the tests: dotnet test
+        // This will require keyring unlocking interactively before tests proceed.
+
+        Environment.SetEnvironmentVariable("GCM_CREDENTIAL_STORE", "secretservice");
+        Run();
+    }
+
     void Run()
     {
         var store = CredentialManager.Create(Guid.NewGuid().ToString("N"));
