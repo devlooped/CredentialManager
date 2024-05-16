@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RestoreSources>https://api.nuget.org/v3/index.json;https://pkg.kzu.io/index.json</RestoreSources>
+    <RestoreSources Condition="Exists('$(PackageOutputPath)')">$(PackageOutputPath);$(RestoreSources)</RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+    <PackageReference Include="Devlooped.CredentialManager" Version="$(Version)" Condition="Exists('$(PackageOutputPath)')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup Condition="!Exists('$(PackageOutputPath)')">
+    <Compile Remove="EndToEnd.cs" />
+  </ItemGroup>
+
+</Project>
