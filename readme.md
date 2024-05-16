@@ -7,15 +7,12 @@
 [![Build](https://github.com/devlooped/CredentialManager/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/CredentialManager/actions)
 
 <!-- #content -->
-Packages the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform implementation for 
-Windows, macOS and Linux for use as a generic credential store.
+Packages the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
+implementation supporting Windows, macOS and Linux for use as a library with no UI or external dependencies.
 
 Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
 
 ## Usage
-
-The only code in this repository is a helper factory to create the credential store 
-appropriate to the current platform:
 
 ```csharp
 using GitCredentialManager;
@@ -29,6 +26,11 @@ for convenience: `GitCredentialManager`.
 
 The optional *namespace* argument (`myapp` above) can be used to scope credential 
 operations to your own app/service.
+
+The library targets .NET Standard 2.0 for broad applicability.
+
+Supported [credential stores](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md) and their 
+configuration is shared with the GCM project itself.
 
 <!-- #content -->
 <!-- include https://github.com/devlooped/sponsors/raw/main/footer.md -->
