@@ -19,6 +19,15 @@ using GitCredentialManager;
 ...
 
 ICredentialStore store = CredentialManager.Create("myapp");
+
+// Store a credential
+store.AddOrUpdate("https://foo.com", "myusr", "mypwd");
+
+// Retrieve a credential
+ICredential cred = store.Get("https://foo.com", "myusr");
+
+Assert.Equal("myusr", cred.Account);
+Assert.Equal("mypwd", cred.Password);
 ```
 
 The namespace for the `CredentialManager` static factory class is the same as the official GCM itself 
