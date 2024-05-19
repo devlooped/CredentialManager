@@ -111,8 +111,8 @@
 	weak
 [file ".github/workflows/includes.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/includes.yml
-	sha = 11a8757c0012f0d454370823e1cda51398f4337e
-	etag = 73426a1361c9d298b5794c99d774043b8e9425bda759bb769fdaa025636d6e3c
+	sha = 2c10a8351f61b0351c3db105445e032faa5c18aa
+	etag = 3089f53e81f72b4d751548ff64e9fecbaa5ba2c6cd029d9288aab4e8f81580e1
 	weak
 [file ".github/workflows/combine-prs.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/combine-prs.yml
