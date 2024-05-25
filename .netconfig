@@ -83,13 +83,13 @@
 	weak
 [file "src/Directory.Build.props"]
 	url = https://github.com/devlooped/oss/blob/main/src/Directory.Build.props
-	sha = 6dfe21fbd4a8390448958c714f8e9006fc4ac3ca
-	etag = de7c6b643bac2fc6651fa08f69d628cbbe12e7050829b981ac771e1b9ccccd89
+	sha = 6e96c592c7b44bfda10404b9f90e4b8fab299249
+	etag = a4925eb815bbcecc022de8d3245db069573d96ac5ecdf5f0e604f06b5577b01e
 	weak
 [file "src/Directory.Build.targets"]
 	url = https://github.com/devlooped/oss/blob/main/src/Directory.Build.targets
-	sha = 1bf1eacc7ac3920d52c8e7045bfa34abc7c05302
-	etag = 7cb1421f00d9f6f4c00f0ca98e485dcadb927cfa6b3f0b5d4fb212525d2ce9c0
+	sha = 0789bf0988ea61b8dfa601d5769e68dc885ffb71
+	etag = d44a194fd2bc6d564dea8c08245e20856f93ddf155f4acaf8dbfc9f088314737
 	weak
 [file "src/kzu.snk"]
 	url = https://github.com/devlooped/oss/blob/main/src/kzu.snk
