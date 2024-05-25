@@ -22,10 +22,9 @@ public static class CredentialManager
     /// <returns>The <see cref="ICredentialStore"/>.</returns>
     public static ICredentialStore Create(string? @namespace = default)
     {
-        using var context = new CommandContextWrapper(new CommandContext(), @namespace);
         // The context already does the check for the platform and configured store to initialize.
         // By overriding the settings with our wrapper, we ensure just the namespace is overriden.
-        return context.CredentialStore;
+        return new CredentialStore(new CommandContextWrapper(new CommandContext(), @namespace));
     }
 
     class CommandContextWrapper(CommandContext context, string? @namespace) : ICommandContext
