@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.5.0.1](https://github.com/devlooped/CredentialManager/tree/v2.5.0.1) (2024-05-25)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0...v2.5.0.1)
+
+:bug: Fixed bugs:
+
+- Make sure we honor credentials namespace/scope [\#104](https://github.com/devlooped/CredentialManager/pull/104) (@kzu)
+
 ## [v2.5.0](https://github.com/devlooped/CredentialManager/tree/v2.5.0) (2024-05-16)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0-rc.1...v2.5.0)
