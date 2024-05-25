@@ -56,6 +56,24 @@ public class EndToEnd : IDisposable
         Run();
     }
 
+    [WindowsFact]
+    public void SavedOneNamespaceCannotRetrieveAnother()
+    {
+        var ns1 = Guid.NewGuid().ToString("N");
+        var ns2 = Guid.NewGuid().ToString("N");
+
+        var store1 = CredentialManager.Create(ns1);
+        var store2 = CredentialManager.Create(ns2);
+
+        var usr = Guid.NewGuid().ToString("N");
+        var pwd = Guid.NewGuid().ToString("N");
+
+        store1.AddOrUpdate("https://test.com", usr, pwd);
+
+        Assert.Null(store2.Get("https://test.com", usr));
+        Assert.Empty(store2.GetAccounts("https://test.com"));
+    }
+
     void Run()
     {
         var store = CredentialManager.Create(Guid.NewGuid().ToString("N"));
