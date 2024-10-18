@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Devlooped.CredentialManager</RootNamespace>
+    <AssemblyName>Devlooped.CredentialManager.CodeAnalysis</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackFolder>analyzers/dotnet</PackFolder>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGetizer" Version="1.2.3" PrivateAssets="all" />
+    <PackageReference Include="ThisAssembly.AssemblyInfo" Version="1.4.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" Pack="false" />
+    <PackageReference Include="PolySharp" Version="1.14.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Devlooped.CredentialManager.targets" PackagePath="build/Devlooped.CredentialManager.targets" />
+  </ItemGroup>
+
+  <PropertyGroup Label="SponsorLink">
+    <CustomAfterMicrosoftCSharpTargets>$(MSBuildThisFileDirectory)..\SponsorLink\SponsorLink.Analyzer.targets</CustomAfterMicrosoftCSharpTargets>
+    <!-- We also bring in the additional packages that just customize ThisAssembly.Constants -->
+    <FundingPackageId>Devlooped.CredentialManager</FundingPackageId>
+  </PropertyGroup>
+
+  <Target Name="VerifySponsorLink" AfterTargets="Build">
+    <Error Condition="'$(SponsorLinkImported)' != 'true'" Text="SponsorLink was not imported." />
+  </Target>
+
+</Project>

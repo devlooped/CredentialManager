@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <Product>Devlooped.CredentialManager</Product>
+
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+  </PropertyGroup>
+</Project>
