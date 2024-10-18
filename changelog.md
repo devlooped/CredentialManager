@@ -1,8 +1,8 @@
 # Changelog
 
-## [v2.6.0-beta](https://github.com/devlooped/CredentialManager/tree/v2.6.0-beta) (2024-10-18)
+## [v2.6.0](https://github.com/devlooped/CredentialManager/tree/v2.6.0) (2024-10-18)
 
-[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0.1...v2.6.0-beta)
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0.1...v2.6.0)
 
 :sparkles: Implemented enhancements:
 
