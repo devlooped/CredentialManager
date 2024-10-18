@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Devlooped.CredentialManager</RootNamespace>
-    <AssemblyName>Devlooped.CredentialManager.CodeAnalysis</AssemblyName>
+    <AssemblyName>Devlooped.CredentialManager.Analyzers</AssemblyName>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackFolder>analyzers/dotnet</PackFolder>
     <IsPackable>false</IsPackable>
