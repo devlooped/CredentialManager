@@ -8,6 +8,10 @@
 
 <!-- #content -->
 <!-- include https://github.com/devlooped/.github/raw/main/sponsorlink.md -->
+*This project uses [SponsorLink](https://github.com/devlooped#sponsorlink) 
+and may issue IDE-only warnings if no active sponsorship is detected.*
+
+<!-- https://github.com/devlooped/.github/raw/main/sponsorlink.md -->
 
 Packages the official [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
 implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies.
