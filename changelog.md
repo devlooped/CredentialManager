@@ -1,5 +1,23 @@
 # Changelog
 
+## [v2.6.0-beta](https://github.com/devlooped/CredentialManager/tree/v2.6.0-beta) (2024-10-18)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0.1...v2.6.0-beta)
+
+:sparkles: Implemented enhancements:
+
+- Bump gcm from v2.5.0 \> v2.6.0 [\#111](https://github.com/devlooped/CredentialManager/pull/111) (@kzu)
+
+:bug: Fixed bugs:
+
+- Bump to GCM v2.6.0 [\#109](https://github.com/devlooped/CredentialManager/issues/109)
+- GitCredentialManager.Trace2Exception: 'Failed to decrypt file '/home/bairog/.password-store/myapp/https/foo.com/myusr.gpg' with gpg [\#108](https://github.com/devlooped/CredentialManager/issues/108)
+- Credentials namespace/scope is not honored [\#103](https://github.com/devlooped/CredentialManager/issues/103)
+
+:twisted_rightwards_arrows: Merged:
+
+- Adopt SL v2 from 2.6+ [\#113](https://github.com/devlooped/CredentialManager/pull/113) (@kzu)
+
 ## [v2.5.0.1](https://github.com/devlooped/CredentialManager/tree/v2.5.0.1) (2024-05-25)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0...v2.5.0.1)
