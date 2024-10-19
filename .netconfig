@@ -456,6 +456,7 @@
 	weak
 [file "src/Core/Interop/src/shared/Core/Interop"]
 	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.6.0/src/shared/Core/Interop
+	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.5.0/src/shared/Core/Interop
 [file "src/Core/Interop/src/shared/Core/Interop/src/shared/Core/Interop/InteropException.cs"]
 	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/InteropException.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
