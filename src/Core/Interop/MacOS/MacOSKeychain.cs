@@ -66,6 +66,7 @@ namespace GitCredentialManager.Interop.MacOS
                         if (typeId == CFArrayGetTypeID())
                         {
                             int len = (int)CFArrayGetCount(resultPtr);
+                            // NOTE: removed len from HashSet ctor since it's not supported in NS2.0
                             var accounts = new HashSet<string>();
                             for (int i = 0; i < len; i++)
                             {

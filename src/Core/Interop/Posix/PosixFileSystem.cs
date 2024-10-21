@@ -3,7 +3,7 @@ using System.IO;
 
 namespace GitCredentialManager.Interop.Posix
 {
-    public abstract class PosixFileSystem : FileSystem
+    public abstract partial class PosixFileSystem : FileSystem
     {
         /// <summary>
         /// Recursively resolve a symbolic link.
@@ -56,33 +56,5 @@ namespace GitCredentialManager.Interop.Posix
             return Path.Combine("/", partialPath);
 #endif
         }
-
-#if NETSTANDARD2_0
-        private static bool TryResolveFileLink(string path, out string target)
-        {
-            target = null;
-            return false;
-        }
-
-        private static bool TryResolveDirectoryLink(string path, out string target)
-        {
-            target = null;
-            return false;
-        }
-#elif !NETFRAMEWORK
-        private static bool TryResolveFileLink(string path, out string target)
-        {
-            FileSystemInfo fsi = File.ResolveLinkTarget(path, true);
-            target = fsi?.FullName;
-            return fsi != null;
-        }
-
-        private static bool TryResolveDirectoryLink(string path, out string target)
-        {
-            FileSystemInfo fsi = Directory.ResolveLinkTarget(path, true);
-            target = fsi?.FullName;
-            return fsi != null;
-        }
-#endif
     }
 }
