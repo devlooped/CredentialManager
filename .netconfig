@@ -65,8 +65,8 @@
 	weak
 [file ".github/workflows/dotnet-file.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-file.yml
-	sha = 42704be2c0d171328d5b7ac7f6a543fd0476aba2
-	etag = 333852bc56fd69b4b5bfb8adbf04c363d6cda52fee12f7364686a12de6040574
+	sha = 59aaf432369b5ea597831d4feec5a6ac4024c2e3
+	etag = 1374e3f8c9b7af69c443605c03f7262300dcb7d783738d9eb9fe84268ed2d10c
 	weak
 [file ".github/workflows/publish.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/publish.yml
@@ -973,4 +973,9 @@
 	url = https://github.com/devlooped/SponsorLink/blob/main/samples/dotnet/readme.md
 	sha = 7407f5b3461213ae764f53ee93651a34487e458c
 	etag = 50937c64732bb2b97ddc67cc7b7b2d091c51390c9f5f2b5fdcfe9f1becb5d838
+	weak
+[file ".github/workflows/dotnet-file-core.yml"]
+	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-file-core.yml
+	sha = 875284ba5d565f529aba2f5d24ab8ed27c1d1c79
+	etag = 8de1d974bf73b1945b5c8be684c3a0b7364114a0d795c9d68837aed9b3aff331
 	weak
