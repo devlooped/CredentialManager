@@ -1,7 +1,7 @@
 [file "src/Core/Authentication/OAuth"]
-	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.6.0/src/shared/Core/Authentication/OAuth/
+	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.6.1/src/shared/Core/Authentication/OAuth/
 [file "src/Core/Interop"]
-	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.6.0/src/shared/Core/Interop/
+	url = https://github.com/git-ecosystem/git-credential-manager/tree/v2.6.1/src/shared/Core/Interop/
 [file "src/SponsorLink"]
 	url = https://github.com/devlooped/SponsorLink/tree/main/samples/dotnet/
 [file]
@@ -133,252 +133,256 @@
 	etag = 556a28914eeeae78ca924b1105726cdaa211af365671831887aec81f5f4301b4
 	weak
 [file "src/Core/CommandContext.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/CommandContext.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/CommandContext.cs
 	sha = de1ff8bdeac3d60a76e0ebba98e01781d38a9d4d
 	etag = a62f430e31fd818c9576ebd4b07544fccb16d7a5fd29bcabcc840d7ba3c523c0
 	weak
 [file "src/Core/Trace2.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2.cs
 	sha = a0599d08e06097b84c0fbbb18e9133ebe9977177
 	etag = a8e7322f388aa565e9222cd0b32ffd44d7b4072da04db7ccbe3fa5d561d07b56
 	weak
 [file "src/Core/StandardStreams.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/StandardStreams.cs
-	sha = b8f4c28742268a7b5c783c1b302e12450ef7b8b1
-	etag = f73b9ea3181214fa10bce6ac62750494393f9c4086fa11954e51821de0f8c125
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/StandardStreams.cs
+	sha = 61e4fa4c328c232445618dd4ae7a0c5f31776fc5
+
+	etag = b8b7e537bbe07310e5d8e741a41e2e84f14279d58aab4dfe973161b5c0f59baf
 	weak
 [file "src/Core/ITerminal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ITerminal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ITerminal.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 576b88afbd5990a6839bc20ae78006a6d270f57cfc864402b5b7fc50f3dde8c1
 	weak
 [file "src/Core/ISessionManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ISessionManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ISessionManager.cs
 	sha = e040cdff0eb0cdda610cbca1c730d020cbbfe5e8
 	etag = d0d8884d316a5782a88affa5ff83705b259e1407d328ae2ee405f477bb60a6d5
 	weak
 [file "src/Core/FileSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/FileSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/FileSystem.cs
 	sha = d37c201c3dc9a61078777ccaf770b707579d7722
 	etag = 11c4b510355966ca7fb9401bfb7a9ea7c08f02a061ca0c27c6aa16a3e20ec0d3
 	weak
 [file "src/Core/ICredentialStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ICredentialStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ICredentialStore.cs
 	sha = 28edc00ccca5cac29407687e09f6be4320f63f95
 	etag = a3d76b41023dad821a121db5f97cd1c8ca13050a3b67aaff159eed8d379f9c99
 	weak
 [file "src/Core/Credential.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Credential.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Credential.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = c9e982b5a617e964e668a9441c599cad48a1bcfdb328cdba1c16aacc960b7c43
 	weak
 [file "src/Core/Trace.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace.cs
 	sha = e104c1881cbf18bc7a1efbc4d1eceb32fe3370fe
 	etag = e7c3cce66cc5be89165f1bae27bda691cf35186e6056c0221d62c8f7c937046f
 	weak
 [file "src/Core/HttpClientFactory.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/HttpClientFactory.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/HttpClientFactory.cs
 	sha = a656832ff360c66313d0b669e27eebf22cb44e30
 	etag = 88c94e9107332d43f3b7685f376f7a1c3639367fce2a7f2294c154dd061b1051
 	weak
 [file "src/Core/Git.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Git.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Git.cs
 	sha = 6931c9275780477eae6b682a542c739924d44a36
 	etag = 08a172d297cf60dd5d978b20557021c559acf9c4028cd556f02cb23b075cdb68
 	weak
 [file "src/Core/EnvironmentBase.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/EnvironmentBase.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/EnvironmentBase.cs
 	sha = f25667261e9df8d96b8fce25b7c39f48a800b554
 	etag = 07812af00bf0bc0d845e8c0c263d945a8e99ae058c0e46da066f27d205907b39
 	weak
 [file "src/Core/ProcessManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ProcessManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ProcessManager.cs
 	sha = 65e5a883bacd1e3e54fc40726812237a1066c8f4
 	etag = 55bda8c781d56304e55d0da982a613bf877c69f604e535c3ffe4b41c454df4fe
 	weak
 [file "src/Core/DisposableObject.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/DisposableObject.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/DisposableObject.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 6c463a8bb34938152853feea21a08a60292d3ffb7c894ebb689f15d047bc0802
 	weak
 [file "src/Core/PlatformUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/PlatformUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/PlatformUtils.cs
 	sha = 59f01d9d737cd4b649c1596a81054e22b390fd32
 	etag = 9a2583672f4b82b9b3e18bbb13b5c83ffe3aa80db53083717df3d770c62f0cab
 	weak
 [file "src/Core/Trace2Exception.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2Exception.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2Exception.cs
 	sha = 23997510a8cebb2e3494e9f6307b66bcfa13b6f5
 	etag = e79adb2b44d0ed5dd3feedd07689df6ab51f7aed487c1ced0d04be9c97732925
 	weak
 [file "src/Core/Trace2FileWriter.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2FileWriter.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2FileWriter.cs
 	sha = 933bb26c9fa675732492eca8334db3f0dcb3d050
 	etag = 0d96497993637c9030895038c34eee99249e510ee8a8f00ee7ad0d265e6dfc35
 	weak
 [file "src/Core/Trace2StreamWriter.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2StreamWriter.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2StreamWriter.cs
 	sha = ec9359d15296eaaeac65056eb1b934a85680c898
 	etag = 739a550aef55822386820b8e9a4e35a7a00be51f83865e79592c3969d9e49252
 	weak
 [file "src/Core/Trace2Message.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2Message.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2Message.cs
 	sha = 865a3c52e0374b78f5cf29553d4c9f37799b050b
 	etag = 43c7b1db7ece0e09f8ed8576f1151bec9855f174eec33a881fc596418d4cfe08
 	weak
 [file "src/Core/ITrace2Writer.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ITrace2Writer.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ITrace2Writer.cs
 	sha = 59a2692614fb3f1a8afdfeaa03f4d7e38318e648
 	etag = dd8851bb18d908dc790f6eb49326ac33325895ceaff4b43100ce4e18124303b8
 	weak
 [file "src/Core/Settings.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Settings.cs
-	sha = 3183801eacdc6653e9046d9d2fbeb6c59efc8408
-	etag = 5d1ab8c9ff66e5ee63a530f64f4deb10d62f6032c8766ff1f451e066be6e2434
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Settings.cs
+	sha = 32d205b8ea623dfdb8d663a1ff8b2d5da3a8903b
+
+	etag = cef2ef5775f780128d7a284c9e642d3eac12e2fa2f877cbef8d8cde03fd58526
 	weak
 [file "src/Core/PlaintextCredentialStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/PlaintextCredentialStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/PlaintextCredentialStore.cs
 	sha = e8b02e00891f718d8b9617d7944c523ebf17e60f
 	etag = 40dea3f67e29e27b9289ca3a0d8879dea85e057e77f3c3fb030260cb09fa399e
 	weak
 [file "src/Core/ISystemPrompts.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ISystemPrompts.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ISystemPrompts.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 673adabdaa4e48aa4ce75b28145c113a6a905239c710e6dd0ad0de79e3cd9134
 	weak
 [file "src/Core/Gpg.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Gpg.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Gpg.cs
 	sha = 40f75089539bd6908b88f3a6ae867003cd34126a
 	etag = 0e31e59cffabf4bcc13c98cf2ac5fd483e5c23a38782d44f6dbf2ea33e864843
 	weak
 [file "src/Core/GitConfiguration.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/GitConfiguration.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/GitConfiguration.cs
 	sha = 336278cdd430a73139d685b1d81dfd6108797a97
 	etag = 4e90a0ab5f1d8406441525f2cb93e9ba945944d11fdc51dcc9f4812377d36ce8
 	weak
 [file "src/Core/FileCredential.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/FileCredential.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/FileCredential.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = c6f8ec0141576d6fc00db4c4fc6f390c901576d9ab05aead2836fe62516d0693
 	weak
 [file "src/Core/GitVersion.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/GitVersion.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/GitVersion.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 9ea13a9c4ca7e0938ea1b374104a4fa45f3e29f26b81acc90ddd427626b35551
 	weak
 [file "src/Core/ChildProcess.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ChildProcess.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ChildProcess.cs
 	sha = 40f75089539bd6908b88f3a6ae867003cd34126a
 	etag = e09e721226f8c97b6481291a7d1486ccba656bfca69eace5cb637535a7d8850a
 	weak
 [file "src/Core/GitConfigurationEntry.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/GitConfigurationEntry.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/GitConfigurationEntry.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 74e4373ccff2f0f06c249c8300510286484efa9932031df1d5d82df357a077cb
 	weak
 [file "src/Core/Constants.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Constants.cs
-	sha = a96afbb254675544a1f60cf7a6865b540785deac
-	etag = 16a1a9e8c14f9957145ed5b27ec7251902861178fae380929f55cc827b05f3fd
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Constants.cs
+	sha = b05317f74562e087b56ce8e7fdfc44e33c400589
+
+	etag = 8f3baf8cd7da7a182199462982107ffa98478c224a7017a5f32d16a7fc2fec91
 	weak
 [file "src/Core/ConvertUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/ConvertUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/ConvertUtils.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 53cd52a712295538009308b0ce7cb008ab776f1a8b686f90b0ad6c783b2b02cd
 	weak
 [file "src/Core/EnsureArgument.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/EnsureArgument.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/EnsureArgument.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 1930fdc866b9fa2228fdf338cb5a6420d775c8d7e3d321ff30c47535aeaa2115
 	weak
 [file "src/Core/StringExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/StringExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/StringExtensions.cs
 	sha = 7d2a8cc583a8aeae104c6cb144fde1328ef50cae
 	etag = f7b83bbe6f2c0d41b0f8b15f1be54d571ca0180e95ed4d016375c4f6b05ed800
 	weak
 [file "src/Core/StreamExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/StreamExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/StreamExtensions.cs
 	sha = 93cada914ca47632dd6972e6f5d927eebe78ca37
 	etag = 9cc36b7d21782a7a42acd08526921a2dd2f106418d13b0ad49e1e4efa182cc1d
 	weak
 [file "src/Core/Trace2CollectorWriter.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Trace2CollectorWriter.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Trace2CollectorWriter.cs
 	sha = e9db80225e3961aa33442d0918827bf44176ded5
 	etag = 551cd3c933737a31c0e9cc6923eea89846146fa3072174667127b351db3847b7
 	weak
 [file "src/Core/CurlCookie.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/CurlCookie.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/CurlCookie.cs
 	sha = cebbc7342410e8f3f9c03eb42124ea7f78f0beb1
 	etag = 3f60948fc943c01317d5fc3901c5fee0eabda96945c0a210f9e07f36b49a9e0f
 	weak
 [file "src/Core/WslUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/WslUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/WslUtils.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = b5e18ee7a809623c704540c922d3fdca94ae72b97cf5b8562e232e41025dfd7c
 	weak
 [file "src/Core/TraceUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/TraceUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/TraceUtils.cs
 	sha = c2366f7444e93600f6421da61e3773701f663e80
 	etag = 44b1a076f7212a0b2e22fefdd0430473cc0076db1371af54e69f7f4861010369
 	weak
 [file "src/Core/GitConfigurationKeyComparer.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/GitConfigurationKeyComparer.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/GitConfigurationKeyComparer.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 6aa47b7ad804d36e31807eddd6c8297d9f3314d76e486e82824df493caeaa75a
 	weak
 [file "src/Core/IniFile.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/IniFile.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/IniFile.cs
 	sha = 6b887e1a28f8fcc876168a9f5b0f39b9ead3879d
 	etag = 34f073b3757e0d7b536de1efa9d4f994951f11ab0e755e0f7efb6015da035fc6
 	weak
 [file "src/Core/CredentialStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/CredentialStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/CredentialStore.cs
 	sha = a96afbb254675544a1f60cf7a6865b540785deac
-	etag = 6b67f3a4fcc2abbe2f0adee583449171ffa9a3892fcd28cb40b87ffb384abe22
+
+	etag = 4311ca41c4664690a5a4cb34e3368ecf7dee914a48b7152e35e2d6d863cd426f
 	weak
 [file "src/Core/CredentialCacheStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/CredentialCacheStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/CredentialCacheStore.cs
 	sha = 28edc00ccca5cac29407687e09f6be4320f63f95
 	etag = 35ce2cdfa6252d82a900e35c5dcbae44397e386621c2a261622f73a2a594143d
 	weak
 [file "src/Core/EncodingEx.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/EncodingEx.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/EncodingEx.cs
 	sha = b8f4c28742268a7b5c783c1b302e12450ef7b8b1
 	etag = 62aedc21b88779f163601f289a557884d19a3c888cab3add58247a0dc3dd66ea
 	weak
 [file "src/Core/BrowserUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/BrowserUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/BrowserUtils.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = f9a39627fd901ab3d2070430b6c5db768398314645cefde773e3aaf43c89904d
 	weak
 [file "src/Core/AssemblyUtils.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/AssemblyUtils.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/AssemblyUtils.cs
 	sha = 7cee518ca65a7d455d5c6fcbbad0402222d311b7
 	etag = 9a900d42799b17385cb34bd4742b4ba67fd6b332fc569b91a579f22e73173ae1
 	weak
 [file "src/Core/Base64UrlConvert.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Base64UrlConvert.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Base64UrlConvert.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 245a19ebb1c92ca2f5d90d6a7d1ad1409d2114b1dbd5f3a6304e6dd86292c622
 	weak
 [file "src/Core/UriExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/UriExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/UriExtensions.cs
 	sha = 62abc306bfa051ced74fb9e82a9db5b365aa57a8
 	etag = 313c8e305a46518dbb6e9ac462eba0254a6f22aeb5d691b1e656d1a60642bd4c
 	weak
 [file "src/Core/DictionaryExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/DictionaryExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/DictionaryExtensions.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 752b70be414a32723694ce143c852e92baf8fd8b865a94f3b6382f47c95fa2e1
 	weak
 [file "src/Core/NameValueCollectionExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/NameValueCollectionExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/NameValueCollectionExtensions.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = ebc36bdebb0c2e2a5668b8641db5df33dc70f51b11d8e05ee54d5492ece5aa71
 	weak
 [file "src/Core/HttpRequestExtensions.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/HttpRequestExtensions.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/HttpRequestExtensions.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 86395d5341813a666be65cc17b651204e05959f79060c015f1edb6a98d33c85e
 	weak
@@ -398,17 +402,17 @@
 	etag = 01968d1415a4c442dc85584255960f56905738856847610d7d485be3692b92b3
 	weak
 [file "src/Core/Authentication/OAuth/Json/DeviceAuthorizationEndpointResponseJson.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Authentication/OAuth/Json/DeviceAuthorizationEndpointResponseJson.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Authentication/OAuth/Json/DeviceAuthorizationEndpointResponseJson.cs
 	sha = 71d03fb493060e75f9e45bf8b87a97582a51a7b2
 	etag = 525c9d16e0e14c00d3b5b99be72068d173d39f303e9a72619e7158093331428e
 	weak
 [file "src/Core/Authentication/OAuth/Json/ErrorResponseJson.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Authentication/OAuth/Json/ErrorResponseJson.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Authentication/OAuth/Json/ErrorResponseJson.cs
 	sha = 71d03fb493060e75f9e45bf8b87a97582a51a7b2
 	etag = da7bd48c0d137f97c77b5daead4c0a51be52271ae6a0ceded3352bcaef9b15da
 	weak
 [file "src/Core/Authentication/OAuth/Json/TokenEndpointResponseJson.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Authentication/OAuth/Json/TokenEndpointResponseJson.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Authentication/OAuth/Json/TokenEndpointResponseJson.cs
 	sha = f1bed778d415cc67758952a9a17d56f0b611f626
 	etag = 2fc143bcb9d7a6b7ee021bc980f8ec3e60cf070697a4d60e0846a62c5abdc4f4
 	weak
@@ -468,167 +472,167 @@
 	etag = dca8d5613f5627ead2e2229f46d3db365cfe533e0677c32077fbc943d38b0ad0
 	weak
 [file "src/Core/Interop/Linux/LinuxFileSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/LinuxFileSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/LinuxFileSystem.cs
 	sha = ca19938cc0171e89245447be8e534ee93507ed6a
 	etag = 45542500a9797765b8cb91f4cc588af80ee1345050db2fadcb6edf71ce299d7b
 	weak
 [file "src/Core/Interop/Linux/LinuxSessionManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/LinuxSessionManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/LinuxSessionManager.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = 84b54d3c5af611ac8410acffe5600b9644e359d64b33550259bf7ad1293c1dd0
 	weak
 [file "src/Core/Interop/Linux/LinuxTerminal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/LinuxTerminal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/LinuxTerminal.cs
 	sha = 94f8d91eacc5ffc5037ab0d96337a531419b4021
 	etag = 7feccef50d58fd90c408910dd2e33e7226676b5cc2635c23a44649d57a776115
 	weak
 [file "src/Core/Interop/Linux/Native/Glib.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/Native/Glib.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/Native/Glib.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 5bc2ebdca310c5e15d1d6c7e3e4ca31942f44b4097a1285cdf8578de1b912efb
 	weak
 [file "src/Core/Interop/Linux/Native/Gobject.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/Native/Gobject.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/Native/Gobject.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = e1382665b774a1bbb6bec13f90c8089d078df7dd3bb866c41f5b81ae4f9f1419
 	weak
 [file "src/Core/Interop/Linux/Native/Libsecret.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/Native/Libsecret.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/Native/Libsecret.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 8adee76b5d50c9ddec440987cf9a6111c296ea6095b72df92a1bb29327db3c31
 	weak
 [file "src/Core/Interop/Linux/Native/termios_Linux.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/Native/termios_Linux.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/Native/termios_Linux.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 6df5d1e191d616cbff2fe3d71636c62674c577b6638add1cd42364ff24acd82d
 	weak
 [file "src/Core/Interop/Linux/SecretServiceCollection.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/SecretServiceCollection.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/SecretServiceCollection.cs
 	sha = e8b02e00891f718d8b9617d7944c523ebf17e60f
 	etag = 972a9897b6965920d50df8ac0096fd20b19d5b8ca6ab47545efb13727c7f09d8
 	weak
 [file "src/Core/Interop/Linux/SecretServiceCredential.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Linux/SecretServiceCredential.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Linux/SecretServiceCredential.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 81f9f6596053c460f2985fb34f18c81bff20592da3b049ad8c6e22a8f0437dc7
 	weak
 [file "src/Core/Interop/MacOS/MacOSEnvironment.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSEnvironment.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSEnvironment.cs
 	sha = a130fec718edbc83e8067f0cde58b1fd720ce087
 	etag = 632d1e96b5fd90a4f5c8bcc6d5301d0e6091730e6201474e42ee1c4881340450
 	weak
 [file "src/Core/Interop/MacOS/MacOSFileSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSFileSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSFileSystem.cs
 	sha = ca19938cc0171e89245447be8e534ee93507ed6a
 	etag = 35caf38c0f385f3b4c25be84b3c2e653aea3bfb01fc6e70b8c3a976bae40c0f9
 	weak
 [file "src/Core/Interop/MacOS/MacOSKeychain.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSKeychain.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSKeychain.cs
 	sha = e8b02e00891f718d8b9617d7944c523ebf17e60f
 	etag = b5620ea3389be1b835fea207842a003bf9454e0170b00ccd22472e0a9ce0f4fc
 	weak
 [file "src/Core/Interop/MacOS/MacOSKeychainCredential.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSKeychainCredential.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSKeychainCredential.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = a779c3a8d51f10326eb557063f185276b2f78807e1bbe064876658561fdbcb22
 	weak
 [file "src/Core/Interop/MacOS/MacOSSessionManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSSessionManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSSessionManager.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = a841138dad7dd688e2b6481f099b2f81d4caec1f57e1ff9d4f487f5fe5dd4bf1
 	weak
 [file "src/Core/Interop/MacOS/MacOSTerminal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/MacOSTerminal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/MacOSTerminal.cs
 	sha = 94f8d91eacc5ffc5037ab0d96337a531419b4021
 	etag = 8781a490dcd3f396279f9de3d4a164cd36cc49044227494b974f0359d2aa365b
 	weak
 [file "src/Core/Interop/MacOS/Native/CoreFoundation.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/Native/CoreFoundation.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/Native/CoreFoundation.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 62b890c452dfaafdf8d681084b6625d146373ac2bb37c446defc70128dbb7179
 	weak
 [file "src/Core/Interop/MacOS/Native/LibC.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/Native/LibC.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/Native/LibC.cs
 	sha = 7366a54fef612322a8fcbe8c2b8c273e46737358
 	etag = 2f699a6798408046255138f57a090168028d4d41a00a78924b70dc66f4345cc5
 	weak
 [file "src/Core/Interop/MacOS/Native/LibSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/Native/LibSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/Native/LibSystem.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = b498c2d322c4078bec002ac1b26335c37917231ca1dec6d04746411872de97a6
 	weak
 [file "src/Core/Interop/MacOS/Native/SecurityFramework.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/Native/SecurityFramework.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/Native/SecurityFramework.cs
 	sha = 28edc00ccca5cac29407687e09f6be4320f63f95
 	etag = 1fceccc37794b0938b6d5d01f48ead468d1956dff3c032edb998a1a9e85bdefc
 	weak
 [file "src/Core/Interop/MacOS/Native/termios_MacOS.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/MacOS/Native/termios_MacOS.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/MacOS/Native/termios_MacOS.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = ff460668bc6e9f9d431ca4aa3e5ed6066453d411572fbc00b17ec2303aed1f9f
 	weak
 [file "src/Core/Interop/Posix/GpgPassCredentialStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/GpgPassCredentialStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/GpgPassCredentialStore.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 29dbffffd90bd6167a3f6e6f52e0a918ee1447cf571da3257aaea077b2ea41e5
 	weak
 [file "src/Core/Interop/Posix/Native/Fcntl.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Fcntl.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Fcntl.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = dd87dc81c72259c941104f12199323916698f06bbdf7e157c895280ef147eb3e
 	weak
 [file "src/Core/Interop/Posix/Native/Signal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Signal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Signal.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = aee509b4626bd9de0ee713ba08315e9c816bca7c90f7379ab4730bb7b3488e1c
 	weak
 [file "src/Core/Interop/Posix/Native/Stat.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Stat.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Stat.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 6d0d2b5deff0b6554cf2e8fcdba10717253a85aca9abeebde39b264cc39d452e
 	weak
 [file "src/Core/Interop/Posix/Native/Stdio.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Stdio.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Stdio.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 03500cbe78f498f2d72fe86ffb05e9207022e8ff1898015903cba2aec16f5d1c
 	weak
 [file "src/Core/Interop/Posix/Native/Stdlib.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Stdlib.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Stdlib.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 1397abe89883a92138b9b011751c611e7e1a8ac3fa10a104e8c8e038789b1fba
 	weak
 [file "src/Core/Interop/Posix/Native/Termios.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Termios.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Termios.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = b86393bf808f9246e62f78bbdbe5e49fe13dc0a26f0fccb9fa71561c9e410020
 	weak
 [file "src/Core/Interop/Posix/Native/Unistd.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/Native/Unistd.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/Native/Unistd.cs
 	sha = 7366a54fef612322a8fcbe8c2b8c273e46737358
 	etag = 3753d6444a3319b6bc35c7ab719d989bd2d79ff8e297247ce5dbe15d4a49a566
 	weak
 [file "src/Core/Interop/Posix/PosixEnvironment.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/PosixEnvironment.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/PosixEnvironment.cs
 	sha = a130fec718edbc83e8067f0cde58b1fd720ce087
 	etag = 12e8e06a15efbef40f84b7cf38432146d66416012dfbd8c47815dd279ed75d7e
 	weak
 [file "src/Core/Interop/Posix/PosixFileDescriptor.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/PosixFileDescriptor.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/PosixFileDescriptor.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 125d0a1c8ca34099eb44bccb0b5dfeece94186857dd485ab30ca48cd69e75665
 	weak
 [file "src/Core/Interop/Posix/PosixFileSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/PosixFileSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/PosixFileSystem.cs
 	sha = ca19938cc0171e89245447be8e534ee93507ed6a
 	etag = 9d4c92402f7abcd44248d9029af7acd52395d0c15619e4bc8fa29acf86f2fcf3
 	weak
 [file "src/Core/Interop/Posix/PosixSessionManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/PosixSessionManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/PosixSessionManager.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = 6bd57a3335e1d5d594b32aa874c4185a870b25b98558d4da56a98c3660269857
 	weak
 [file "src/Core/Interop/Posix/PosixTerminal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Posix/PosixTerminal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Posix/PosixTerminal.cs
 	sha = dfd3dadc75a823ccdd58222af2435bb811fc2ab0
 	etag = 45b94e78b9a3c918368421196073da6b178e9d4b846274d79d9ee4bd483c0f69
 	weak
@@ -643,87 +647,87 @@
 	etag = a1551b8a18fbb79a48a6d6e78a8202f5d0ba83e81bc1ec35dce7119cd43b8407
 	weak
 [file "src/Core/Interop/Windows/DpapiCredentialStore.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/DpapiCredentialStore.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/DpapiCredentialStore.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 80f94fbc0f53a91cc31db26114611f17372fa925734e647f081bfe2379814411
 	weak
 [file "src/Core/Interop/Windows/Native/Advapi32.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/Advapi32.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/Advapi32.cs
 	sha = e0218ace4a93dcb152e528b24f600bed0ee8483c
 	etag = 4e799d8a0fb8841225668697344a55f0042763f63edb67290fe56bedfcce8fb4
 	weak
 [file "src/Core/Interop/Windows/Native/CredUi.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/CredUi.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/CredUi.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 40fd47027fe8477fab05a514a76b86beef9f6b4d9d6750454d06a0a638dc23a0
 	weak
 [file "src/Core/Interop/Windows/Native/Kernel32.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/Kernel32.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/Kernel32.cs
 	sha = 134e622aefa7f334f656c3356120956c2997e595
 	etag = b2e62982877004fe44051a5a398fc725ac432c917a5baa24820323a2cbde5565
 	weak
 [file "src/Core/Interop/Windows/Native/Ole32.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/Ole32.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/Ole32.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = f8d11d3dc82d81f75f58198023073e640313b01954b47387c50f59981290447a
 	weak
 [file "src/Core/Interop/Windows/Native/Shell32.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/Shell32.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/Shell32.cs
 	sha = fa2cc1805a6f617d7e4dd242501fad860d5fbce2
 	etag = 8e8d401cedb13f66c314e7f695903d72a880802f00a8a6722dbd24c8dbffbdab
 	weak
 [file "src/Core/Interop/Windows/Native/User32.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/User32.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/User32.cs
 	sha = 134e622aefa7f334f656c3356120956c2997e595
 	etag = 73f2ef305aa6614bc3f9d81933fa9c2148c77ab5b7fc3254f4d8084bdc011ff2
 	weak
 [file "src/Core/Interop/Windows/Native/Win32Error.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/Native/Win32Error.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/Native/Win32Error.cs
 	sha = 94f8d91eacc5ffc5037ab0d96337a531419b4021
 	etag = a067404240ae5a98728e74994a426ee85fae5421b573e8658adbaa3034562a4d
 	weak
 [file "src/Core/Interop/Windows/WindowsCredential.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsCredential.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsCredential.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = d9bb85480d058d90c08096b5dfabf4d51934a155627218ec7aceaa67f7dc964d
 	weak
 [file "src/Core/Interop/Windows/WindowsCredentialManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsCredentialManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsCredentialManager.cs
 	sha = e8b02e00891f718d8b9617d7944c523ebf17e60f
 	etag = 3c1ba5e089f75be24172e73767805ca16200230a725f8390c8d1866d9c7a876b
 	weak
 [file "src/Core/Interop/Windows/WindowsEnvironment.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsEnvironment.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsEnvironment.cs
 	sha = a130fec718edbc83e8067f0cde58b1fd720ce087
 	etag = 905ca0898944337420aab8f31e6dc3babc54f1921c8d9346f58f785ff2e7fbf1
 	weak
 [file "src/Core/Interop/Windows/WindowsFileSystem.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsFileSystem.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsFileSystem.cs
 	sha = ca19938cc0171e89245447be8e534ee93507ed6a
 	etag = aff622066a29a9b90e6c77ef75206cf8fde7627a4d6c9ff88e0c3126e9a0df2b
 	weak
 [file "src/Core/Interop/Windows/WindowsProcessManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsProcessManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsProcessManager.cs
 	sha = d1b64ccd07239bdb8de4b732e9963753d4e89a62
 	etag = fc48908142dff5de467bfdbe61d7e026cc463d2abefaa92f39301e4b43b56540
 	weak
 [file "src/Core/Interop/Windows/WindowsSessionManager.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsSessionManager.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsSessionManager.cs
 	sha = d0b767b37d6e6fa42b7c738a3729cdfc41e1c0d1
 	etag = 64ea73ae307d85e4f2e8d69c130454743cc9587a67cc0c1242d4a65f03fd2f32
 	weak
 [file "src/Core/Interop/Windows/WindowsSettings.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsSettings.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsSettings.cs
 	sha = 8122dc0c8fdff17654ce3dea17b3a6fb0c899fff
 	etag = 723171f86db2ec3eb329eed519d74078c75571c44a16eb23b0b95063306b105d
 	weak
 [file "src/Core/Interop/Windows/WindowsSystemPrompts.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsSystemPrompts.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsSystemPrompts.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = 4e9d2b7252fd16b25dd68daa1dc2703f39cfe223a97b7629d6d93a1b318d1ed5
 	weak
 [file "src/Core/Interop/Windows/WindowsTerminal.cs"]
-	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.0/src/shared/Core/Interop/Windows/WindowsTerminal.cs
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.6.1/src/shared/Core/Interop/Windows/WindowsTerminal.cs
 	sha = 94f8d91eacc5ffc5037ab0d96337a531419b4021
 	etag = 6ee21893c4a201ba834c9749b5518fb25f5702e7c4a29c68d3abd5cdf547301e
 	weak
@@ -924,8 +928,9 @@
 	weak
 [file "src/SponsorLink/Tests/Tests.csproj"]
 	url = https://github.com/devlooped/SponsorLink/blob/main/samples/dotnet/Tests/Tests.csproj
-	sha = 0f551e3be564625ee4d078649c55363bf35954ba
-	etag = 7d27c17944c61da196f11f904383b25b3f40579fbeb0cacb367bf05ec184ad7f
+	sha = ac734b9c990cc448c2989eeb09af6c0cd4f105c7
+
+	etag = 9d2e2efafa7e8624751eb4d77848d3cab7633d94c766b726ef3ab118c29d1ff8
 	weak
 [file "src/SponsorLink/Tests/keys/kzu.key"]
 	url = https://github.com/devlooped/SponsorLink/blob/main/samples/dotnet/Tests/keys/kzu.key

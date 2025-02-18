@@ -48,6 +48,19 @@ Supported [credential stores](https://github.com/git-ecosystem/git-credential-ma
 configuration is shared with the GCM project itself.
 
 <!-- #content -->
+
+## Releasing
+
+To create a new release:
+1. Find & replace the latest release tag in this project to the desired release tag in 
+   the [git-credential-manager](https://github.com/git-ecosystem/git-credential-manager/releases) project 
+   in the .netconfig file
+2. Run `dotnet file sync -c:$env:TEMP\dotnet-file.md`
+3. Use the contents of the generated file to update the release notes in the GitHub release. 
+   If no useful notes were generated, just copy the GCM ones.
+4. Create a PR like [this one](https://github.com/devlooped/CredentialManager/pull/111)
+5. Once merged, create a matching release in this project.
+
 <!-- include https://github.com/devlooped/sponsors/raw/main/footer.md -->
 # Sponsors 
 
