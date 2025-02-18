@@ -115,6 +115,8 @@ public static class CredentialManager
 
         public bool UseSoftwareRendering => settings.UseSoftwareRendering;
 
+        public bool AllowUnsafeRemotes => settings.AllowUnsafeRemotes;
+
         public void Dispose() => settings.Dispose();
         public ProxyConfiguration GetProxyConfiguration() => settings.GetProxyConfiguration();
         public IEnumerable<string> GetSettingValues(string envarName, string section, string property, bool isPath) => settings.GetSettingValues(envarName, section, property, isPath);
