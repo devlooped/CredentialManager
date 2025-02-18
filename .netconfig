@@ -980,3 +980,15 @@
 [file ".github/workflows/dotnet-file-core.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-file-core.yml
 	skip
+[file "src/Core/NullCredentialStore.cs"]
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/main/src/shared/Core/NullCredentialStore.cs
+	sha = a96afbb254675544a1f60cf7a6865b540785deac
+
+	etag = c591e1aa0861640787bac6f23e80a16530551be787c6f6385d67514c29c67bc1
+	weak
+[file "src/Core/GitStreamReader.cs"]
+	url = https://github.com/git-ecosystem/git-credential-manager/blob/main/src/shared/Core/GitStreamReader.cs
+	sha = 61e4fa4c328c232445618dd4ae7a0c5f31776fc5
+
+	etag = 2e3ec899bfd58e206cf4f98ab6b2fa65723ed449c4b9cfb9ec34a029a9664be4
+	weak
