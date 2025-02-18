@@ -1,5 +1,17 @@
 # Changelog
 
+## [v2.6.1](https://github.com/devlooped/CredentialManager/tree/v2.6.1) (2025-02-18)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.6.0...v2.6.1)
+
+:sparkles: Implemented enhancements:
+
+- Bump gcm from v2.6.0 \> v2.6.1 [\#122](https://github.com/devlooped/CredentialManager/pull/122) (@kzu)
+
+:twisted_rightwards_arrows: Merged:
+
+- Simplify target paths by leveraging newest dir behavior in dotnet-file [\#116](https://github.com/devlooped/CredentialManager/pull/116) (@kzu)
+
 ## [v2.6.0](https://github.com/devlooped/CredentialManager/tree/v2.6.0) (2024-10-18)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.5.0.1...v2.6.0)
