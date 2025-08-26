@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.InteropServices;
-using DotNetConfig;
-using KnownEnvars = GitCredentialManager.Constants.EnvironmentVariables;
-using KnownGitCfg = GitCredentialManager.Constants.GitConfiguration;
+using GitCredentialManager.Interop.Windows;
 
 namespace GitCredentialManager;
 
@@ -34,7 +30,10 @@ public static class CredentialManager
 
     class CommandContextWrapper(CommandContext context, string? @namespace) : ICommandContext
     {
-        readonly ISettings settings = new SettingsWrapper(context.Settings, @namespace);
+        readonly ISettings settings = new SettingsWrapper(
+            context.Settings is WindowsSettings ?
+            new NoGitWindowsSettings(context.Environment, context.Git, context.Trace) :
+            new NoGitSettings(context.Environment, context.Git), @namespace);
 
         public ISettings Settings => settings;
 
@@ -60,7 +59,7 @@ public static class CredentialManager
 
         public IHttpClientFactory HttpClientFactory => ((ICommandContext)context).HttpClientFactory;
 
-        public IGit Git => ((ICommandContext)context).Git;
+        public IGit Git => new NoGit(context.Git);
 
         public IEnvironment Environment => ((ICommandContext)context).Environment;
 
@@ -71,64 +70,26 @@ public static class CredentialManager
         #endregion
     }
 
+    class NoGitSettings(IEnvironment environment, IGit git) : Settings(environment, new NoGit(git)) { }
+
+    class NoGitWindowsSettings(IEnvironment environment, IGit git, ITrace trace) : WindowsSettings(environment, new NoGit(git), trace) { }
+
     class SettingsWrapper(ISettings settings, string? @namespace) : ISettings
     {
-        static readonly Config gitconfig;
-
-        static SettingsWrapper()
-        {
-            string homeDir;
-
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            }
-            else
-            {
-                // On Linux/Mac it's $HOME
-                homeDir = Environment.GetEnvironmentVariable("HOME")
-                          ?? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            }
-
-            gitconfig = Config.Build(Path.Combine(homeDir, ".gitconfig"));
-        }
-
-        static bool TryGetWrappedSetting(string envarName, string section, string property, out string value)
-        {
-            if (envarName != null && Environment.GetEnvironmentVariable(envarName) is { Length: > 0 } envvar)
-            {
-                value = envvar;
-                return true;
-            }
-
-            return gitconfig.TryGetString(section, property, out value);
-        }
-
-        // Overriden namespace to scope credential operations.
-        public string CredentialNamespace => @namespace ?? (
-            TryGetWrappedSetting(KnownEnvars.GcmCredNamespace,
-                KnownGitCfg.Credential.SectionName, KnownGitCfg.Credential.CredNamespace,
-                out var ns) ? ns : Constants.DefaultCredentialNamespace);
-
-        public string CredentialBackingStore =>
-            TryGetWrappedSetting(
-                KnownEnvars.GcmCredentialStore,
-                KnownGitCfg.Credential.SectionName,
-                KnownGitCfg.Credential.CredentialStore,
-                out string credStore)
-                ? credStore
-                : null!;
-
-        public bool UseMsAuthDefaultAccount =>
-            TryGetWrappedSetting(
-                KnownEnvars.MsAuthUseDefaultAccount,
-                KnownGitCfg.Credential.SectionName,
-                KnownGitCfg.Credential.MsAuthUseDefaultAccount,
-                out string str)
-            ? str.IsTruthy()
-            : PlatformUtils.IsDevBox(); // default to true in DevBox environment
+        public string CredentialNamespace => @namespace ?? settings.CredentialNamespace;
 
         #region pass-through impl.
+
+        public string CredentialBackingStore => settings.CredentialBackingStore;
+
+        public bool UseMsAuthDefaultAccount => settings.UseMsAuthDefaultAccount;
+
+        public IEnumerable<string> GetSettingValues(string envarName, string section, string property, bool isPath)
+            => settings.GetSettingValues(envarName, section, property, isPath);
+
+        public bool GetTracingEnabled(out string value) => settings.GetTracingEnabled(out value);
+        public bool TryGetPathSetting(string envarName, string section, string property, out string value) => settings.TryGetPathSetting(envarName, section, property, out value);
+        public bool TryGetSetting(string envarName, string section, string property, out string value) => settings.TryGetSetting(envarName, section, property, out value);
 
         public Uri RemoteUri { get => settings.RemoteUri; set => settings.RemoteUri = value; }
 
@@ -172,12 +133,7 @@ public static class CredentialManager
 
         public void Dispose() => settings.Dispose();
         public ProxyConfiguration GetProxyConfiguration() => settings.GetProxyConfiguration();
-        public IEnumerable<string> GetSettingValues(string envarName, string section, string property, bool isPath) => settings.GetSettingValues(envarName, section, property, isPath);
         public Trace2Settings GetTrace2Settings() => settings.GetTrace2Settings();
-        public bool GetTracingEnabled(out string value) => settings.GetTracingEnabled(out value);
-        public bool TryGetPathSetting(string envarName, string section, string property, out string value) => settings.TryGetPathSetting(envarName, section, property, out value);
-        public bool TryGetSetting(string envarName, string section, string property, out string value) => settings.TryGetSetting(envarName, section, property, out value);
-
         #endregion
     }
 }
