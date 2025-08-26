@@ -10,7 +10,30 @@ namespace Tests;
 /// </summary>
 public class EndToEnd : IDisposable
 {
-    public EndToEnd() => Environment.SetEnvironmentVariable("GCM_CREDENTIAL_STORE", null);
+    public EndToEnd()
+    {
+        Environment.SetEnvironmentVariable("GCM_CREDENTIAL_STORE", null);
+
+        // Sets fake git path to ensure we're not inadvertently requiring a full git installation
+        var file = "git";
+        if (OperatingSystem.IsWindows())
+            file += ".exe";
+
+        var dir = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+            ? Path.GetTempPath()
+            : Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+        if (!Directory.Exists(dir))
+            Directory.CreateDirectory(dir);
+
+        var path = Path.Combine(dir, file);
+
+        if (!File.Exists(path))
+            File.WriteAllBytes(path, []);
+
+        // Sets fake git path to ensure we're not inadvertently requiring a full git installation
+        Environment.SetEnvironmentVariable("GIT_EXEC_PATH", dir);
+    }
 
     public void Dispose() => Environment.SetEnvironmentVariable("GCM_CREDENTIAL_STORE", null);
 
@@ -35,6 +58,8 @@ public class EndToEnd : IDisposable
     public void GitCacheStore()
     {
         Environment.SetEnvironmentVariable("GCM_CREDENTIAL_STORE", "cache");
+        // Git cache store does depend on git being present, so we set remove the fake path.
+        Environment.SetEnvironmentVariable("GIT_EXEC_PATH", null);
         Run();
     }
 
@@ -84,5 +109,9 @@ public class EndToEnd : IDisposable
         store.AddOrUpdate("https://test.com", usr, pwd);
 
         Assert.Equal(pwd, store.Get("https://test.com", usr).Password);
+
+        store.Remove("https://test.com", usr);
+
+        Assert.Null(store.Get("https://test.com", usr));
     }
 }
