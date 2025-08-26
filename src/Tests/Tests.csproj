@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
-    <PackageReference Include="Devlooped.CredentialManager" Version="42.*" Condition="!$(CI)" />
+    <PackageReference Include="Devlooped.CredentialManager" Version="42.42.42-main.*" Condition="!$(CI)" />
     <PackageReference Include="Devlooped.CredentialManager" Version="$(Version)" Condition="$(CI) And Exists('$(PackageOutputPath)')" />
   </ItemGroup>
 

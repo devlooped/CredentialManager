@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.InteropServices;
+using DotNetConfig;
+using KnownEnvars = GitCredentialManager.Constants.EnvironmentVariables;
+using KnownGitCfg = GitCredentialManager.Constants.GitConfiguration;
 
 namespace GitCredentialManager;
 
@@ -68,8 +73,60 @@ public static class CredentialManager
 
     class SettingsWrapper(ISettings settings, string? @namespace) : ISettings
     {
+        static readonly Config gitconfig;
+
+        static SettingsWrapper()
+        {
+            string homeDir;
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            }
+            else
+            {
+                // On Linux/Mac it's $HOME
+                homeDir = Environment.GetEnvironmentVariable("HOME")
+                          ?? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            }
+
+            gitconfig = Config.Build(Path.Combine(homeDir, ".gitconfig"));
+        }
+
+        static bool TryGetWrappedSetting(string envarName, string section, string property, out string value)
+        {
+            if (envarName != null && Environment.GetEnvironmentVariable(envarName) is { Length: > 0 } envvar)
+            {
+                value = envvar;
+                return true;
+            }
+
+            return gitconfig.TryGetString(section, property, out value);
+        }
+
         // Overriden namespace to scope credential operations.
-        public string CredentialNamespace => @namespace ?? settings.CredentialNamespace;
+        public string CredentialNamespace => @namespace ?? (
+            TryGetWrappedSetting(KnownEnvars.GcmCredNamespace,
+                KnownGitCfg.Credential.SectionName, KnownGitCfg.Credential.CredNamespace,
+                out var ns) ? ns : Constants.DefaultCredentialNamespace);
+
+        public string CredentialBackingStore =>
+            TryGetWrappedSetting(
+                KnownEnvars.GcmCredentialStore,
+                KnownGitCfg.Credential.SectionName,
+                KnownGitCfg.Credential.CredentialStore,
+                out string credStore)
+                ? credStore
+                : null!;
+
+        public bool UseMsAuthDefaultAccount =>
+            TryGetWrappedSetting(
+                KnownEnvars.MsAuthUseDefaultAccount,
+                KnownGitCfg.Credential.SectionName,
+                KnownGitCfg.Credential.MsAuthUseDefaultAccount,
+                out string str)
+            ? str.IsTruthy()
+            : PlatformUtils.IsDevBox(); // default to true in DevBox environment
 
         #region pass-through impl.
 
@@ -99,8 +156,6 @@ public static class CredentialManager
 
         public string ParentWindowId => settings.ParentWindowId;
 
-        public string CredentialBackingStore => settings.CredentialBackingStore;
-
         public string CustomCertificateBundlePath => settings.CustomCertificateBundlePath;
 
         public string CustomCookieFilePath => settings.CustomCookieFilePath;
@@ -110,8 +165,6 @@ public static class CredentialManager
         public bool UseCustomCertificateBundleWithSchannel => settings.UseCustomCertificateBundleWithSchannel;
 
         public int AutoDetectProviderTimeout => settings.AutoDetectProviderTimeout;
-
-        public bool UseMsAuthDefaultAccount => settings.UseMsAuthDefaultAccount;
 
         public bool UseSoftwareRendering => settings.UseSoftwareRendering;
 
