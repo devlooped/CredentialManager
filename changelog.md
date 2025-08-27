@@ -1,5 +1,26 @@
 # Changelog
 
+## [v2.6.1.1](https://github.com/devlooped/CredentialManager/tree/v2.6.1.1) (2025-08-27)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.6.1...v2.6.1.1)
+
+:sparkles: Implemented enhancements:
+
+- Remove dependency on installed git [\#128](https://github.com/devlooped/CredentialManager/pull/128) (@kzu)
+
+:bug: Fixed bugs:
+
+- Account Name is ignored under Linux desktop for AddOrUpdate [\#118](https://github.com/devlooped/CredentialManager/issues/118)
+
+:hammer: Other:
+
+- "no UI or external dependencies." is misleading [\#125](https://github.com/devlooped/CredentialManager/issues/125)
+
+:twisted_rightwards_arrows: Merged:
+
+- Force fake git path on tests to ensure no dependency [\#129](https://github.com/devlooped/CredentialManager/pull/129) (@kzu)
+- Note git dependency is required [\#127](https://github.com/devlooped/CredentialManager/pull/127) (@kzu)
+
 ## [v2.6.1](https://github.com/devlooped/CredentialManager/tree/v2.6.1) (2025-02-18)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.6.0...v2.6.1)
