@@ -46,7 +46,8 @@ jobs:
         id: dev
         if: github.event_name != 'release'
         run: |
-          echo "label=$GITHUB_REF.$GITHUB_RUN_NUMBER" >> $GITHUB_OUTPUT
+          echo "label=$GITHUB_REF" >> $GITHUB_OUTPUT
+          echo "prefix=42.42.$GITHUB_RUN_NUMBER" >> $GITHUB_OUTPUT
 
   build:
     name: build-${{ matrix.os }}
@@ -58,6 +59,7 @@ jobs:
     env:
       Version: ${{ needs.version.outputs.version }}
       VersionLabel: ${{ needs.version.outputs.label }}
+      VersionPrefix: ${{ needs.version.outputs.prefix }}
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v4
