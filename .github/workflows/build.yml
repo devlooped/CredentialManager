@@ -35,6 +35,7 @@ jobs:
     outputs:
       version: ${{ steps.release.outputs.version }}
       label: ${{ steps.dev.outputs.label }}
+      prefix: ${{ steps.dev.outputs.prefix }}
     steps:
       - name: release
         id: release
