@@ -4,6 +4,11 @@ using GitCredentialManager.Interop.Windows;
 
 namespace GitCredentialManager;
 
+public interface ICredentialManager : ICredentialStore
+{
+    ICommandContext Context { get; }
+}
+
 /// <summary>
 /// Provides the factory method <see cref="Create"/> to instantiate a 
 /// <see cref="ICredentialStore"/> appropriate for the current platform and 
@@ -21,11 +26,21 @@ public static class CredentialManager
     /// </summary>
     /// <param name="namespace">Optional namespace to scope credential operations.</param>
     /// <returns>The <see cref="ICredentialStore"/>.</returns>
-    public static ICredentialStore Create(string? @namespace = default)
+    public static ICredentialManager Create(string? @namespace = default)
     {
         // The context already does the check for the platform and configured store to initialize.
         // By overriding the settings with our wrapper, we ensure just the namespace is overriden.
-        return new CredentialStore(new CommandContextWrapper(new CommandContext(), @namespace));
+        var context = new CommandContextWrapper(new CommandContext(), @namespace);
+        return new CredentialManagerStore(new CredentialStore(context), context);
+    }
+
+    class CredentialManagerStore(ICredentialStore store, ICommandContext context) : ICredentialManager
+    {
+        public ICommandContext Context => context;
+        public void AddOrUpdate(string service, string account, string secret) => store.AddOrUpdate(service, account, secret);
+        public ICredential Get(string service, string account) => store.Get(service, account);
+        public IList<string> GetAccounts(string service) => store.GetAccounts(service);
+        public bool Remove(string service, string account) => store.Remove(service, account);
     }
 
     class CommandContextWrapper(CommandContext context, string? @namespace) : ICommandContext
