@@ -103,6 +103,8 @@ public class EndToEnd : IDisposable
     {
         var store = CredentialManager.Create(Guid.NewGuid().ToString("N"));
 
+        Assert.NotNull(store.Context);
+
         var usr = Guid.NewGuid().ToString("N");
         var pwd = Guid.NewGuid().ToString("N");
 
