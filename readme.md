@@ -14,7 +14,7 @@ and may issue IDE-only warnings if no active sponsorship is detected.*
 <!-- https://github.com/devlooped/.github/raw/main/sponsorlink.md -->
 
 Packages the official [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
-implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies beyond just git.
+implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies.
 
 Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
 
@@ -46,6 +46,11 @@ The library targets .NET Standard 2.0 for broad applicability.
 
 Supported [credential stores](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md) and their 
 configuration is shared with the GCM project itself.
+
+
+> [!IMPORTANT]
+> If you use Git's built-in credential cache, a working installation of git 
+> is required. See [GCM docs](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md#gits-built-in-credential-cache).
 
 <!-- #content -->
 
