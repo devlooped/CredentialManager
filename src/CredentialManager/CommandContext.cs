@@ -142,7 +142,7 @@ class CommandContextAdapter : ICommandContext
 
             public bool TryGet(GitConfigurationLevel level, GitConfigurationType type, string name, out string value)
             {
-                value = GetAll(level, type, name).FirstOrDefault();
+                value = GetAll(level, type, name).FirstOrDefault()!;
                 return value is not null;
             }
 
