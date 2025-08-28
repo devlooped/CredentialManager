@@ -16,9 +16,9 @@ namespace GitCredentialManager;
 class CommandContextAdapter : ICommandContext
 {
     readonly CommandContext context;
-    readonly ICredentialStore store;
     readonly ISettings settings;
     readonly IHttpClientFactory clientFactory;
+    ICredentialStore store;
 
     public CommandContextAdapter(CommandContext context, string? @namespace = default)
     {
@@ -37,7 +37,11 @@ class CommandContextAdapter : ICommandContext
 
     public ISettings Settings => settings;
 
-    public ICredentialStore CredentialStore => store;
+    public ICredentialStore CredentialStore
+    {
+        get => store;
+        set => store = value;
+    }
 
     public IHttpClientFactory HttpClientFactory => clientFactory;
 
