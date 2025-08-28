@@ -13,14 +13,35 @@ namespace GitCredentialManager;
 /// A wrapper for <see cref="ICommandContext"/> that overrides the namespace for credentials and also 
 /// allows git-less usage except for the git cache store.
 /// </summary>
-class CommandContextWrapper(CommandContext context, string? @namespace) : ICommandContext
+class CommandContextAdapter : ICommandContext
 {
-    readonly ISettings settings = new SettingsWrapper(
-        context.Settings is WindowsSettings ?
-        new NoGitWindowsSettings(context.Environment, context.Git, context.Trace) :
-        new NoGitSettings(context.Environment, context.Git), @namespace);
+    readonly CommandContext context;
+    readonly ICredentialStore store;
+    readonly ISettings settings;
+    readonly IHttpClientFactory clientFactory;
+
+    public CommandContextAdapter(CommandContext context, string? @namespace = default)
+    {
+        this.context = context;
+
+        store = new CredentialStore(this);
+
+        settings = new SettingsAdapter(
+            context.Settings is WindowsSettings ?
+            new NoGitWindowsSettings(context.Environment, context.Git, context.Trace) :
+            new NoGitSettings(context.Environment, context.Git), @namespace);
+
+        clientFactory = new HttpClientFactory(
+            context.FileSystem, context.Trace, context.Trace2, settings, context.Streams);
+    }
 
     public ISettings Settings => settings;
+
+    public ICredentialStore CredentialStore => store;
+
+    public IHttpClientFactory HttpClientFactory => clientFactory;
+
+    public IGit Git => new NoGit(context.Git);
 
     #region pass-through impl.
 
@@ -39,12 +60,6 @@ class CommandContextWrapper(CommandContext context, string? @namespace) : IComma
     public ITrace2 Trace2 => ((ICommandContext)context).Trace2;
 
     public IFileSystem FileSystem => ((ICommandContext)context).FileSystem;
-
-    public ICredentialStore CredentialStore => ((ICommandContext)context).CredentialStore;
-
-    public IHttpClientFactory HttpClientFactory => ((ICommandContext)context).HttpClientFactory;
-
-    public IGit Git => new NoGit(context.Git);
 
     public IEnvironment Environment => ((ICommandContext)context).Environment;
 
@@ -137,11 +152,14 @@ class CommandContextWrapper(CommandContext context, string? @namespace) : IComma
         }
     }
 
+    /// <summary>Adapts <see cref="Settings"/> to use <see cref="NoGit"/>.</summary>
     class NoGitSettings(IEnvironment environment, IGit git) : Settings(environment, new NoGit(git)) { }
 
+    /// <summary>Adapts <see cref="WindowsSettings"/> to use <see cref="NoGit"/>.</summary>
     class NoGitWindowsSettings(IEnvironment environment, IGit git, ITrace trace) : WindowsSettings(environment, new NoGit(git), trace) { }
 
-    class SettingsWrapper(ISettings settings, string? @namespace) : ISettings
+    /// <summary>Allows overriding the credential namespace.</summary>
+    class SettingsAdapter(ISettings settings, string? @namespace) : ISettings
     {
         public string CredentialNamespace => @namespace ?? settings.CredentialNamespace;
 

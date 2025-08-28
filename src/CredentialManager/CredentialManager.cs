@@ -1,11 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace GitCredentialManager;
-
-public interface ICredentialManager : ICredentialStore
-{
-    ICommandContext Context { get; }
-}
+﻿namespace GitCredentialManager;
 
 /// <summary>
 /// Provides the factory method <see cref="Create"/> to instantiate a 
@@ -24,20 +17,13 @@ public static class CredentialManager
     /// </summary>
     /// <param name="namespace">Optional namespace to scope credential operations.</param>
     /// <returns>The <see cref="ICredentialStore"/>.</returns>
-    public static ICredentialManager Create(string? @namespace = default)
-    {
-        // The context already does the check for the platform and configured store to initialize.
-        // By overriding the settings with our wrapper, we ensure just the namespace is overriden.
-        var context = new CommandContextWrapper(new CommandContext(), @namespace);
-        return new CredentialManagerStore(new CredentialStore(context), context);
-    }
+    public static ICredentialStore Create(string? @namespace = default)
+        => CreateContext(@namespace).CredentialStore;
 
-    class CredentialManagerStore(ICredentialStore store, ICommandContext context) : ICredentialManager
-    {
-        public ICommandContext Context => context;
-        public void AddOrUpdate(string service, string account, string secret) => store.AddOrUpdate(service, account, secret);
-        public ICredential Get(string service, string account) => store.Get(service, account);
-        public IList<string> GetAccounts(string service) => store.GetAccounts(service);
-        public bool Remove(string service, string account) => store.Remove(service, account);
-    }
+    /// <summary>
+    /// Creates a new <see cref="ICommandContext"/> that can be used for GCM operations 
+    /// without depending on a git installation.
+    /// </summary>
+    public static ICommandContext CreateContext(string? @namespace = default)
+        => new CommandContextAdapter(new CommandContext(), @namespace);
 }
