@@ -13,7 +13,7 @@ namespace GitCredentialManager;
 /// A wrapper for <see cref="ICommandContext"/> that overrides the namespace for credentials and also 
 /// allows git-less usage except for the git cache store.
 /// </summary>
-class CommandContextAdapter : ICommandContext
+partial class CommandContextAdapter : ICommandContext
 {
     readonly CommandContext context;
     readonly ISettings settings;
