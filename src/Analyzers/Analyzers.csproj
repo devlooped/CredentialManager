@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="10.0.2" />
     <None Update="Devlooped.CredentialManager.targets" PackagePath="build/Devlooped.CredentialManager.targets" />
   </ItemGroup>
 
