@@ -1,5 +1,24 @@
 # Changelog
 
+## [v2.7.0](https://github.com/devlooped/CredentialManager/tree/v2.7.0) (2026-03-04)
+
+[Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.6.1.1...v2.7.0)
+
+:sparkles: Implemented enhancements:
+
+- ⬆️ Bump gcm from v2.6.1 to v2.7.0 [\#154](https://github.com/devlooped/CredentialManager/pull/154) (@kzu)
+- Removes unnecessary ICredentialManager interface [\#138](https://github.com/devlooped/CredentialManager/pull/138) (@kzu)
+- Refactor wrappers to single file to allow external use [\#134](https://github.com/devlooped/CredentialManager/pull/134) (@kzu)
+- Expose command context from store [\#133](https://github.com/devlooped/CredentialManager/pull/133) (@kzu)
+
+:hammer: Other:
+
+- 💟 Adopting SponsorLink in v2.6+ [\#112](https://github.com/devlooped/CredentialManager/issues/112)
+
+:twisted_rightwards_arrows: Merged:
+
+- +Mᐁ includes [\#152](https://github.com/devlooped/CredentialManager/pull/152) (@kzu)
+
 ## [v2.6.1.1](https://github.com/devlooped/CredentialManager/tree/v2.6.1.1) (2025-08-27)
 
 [Full Changelog](https://github.com/devlooped/CredentialManager/compare/v2.6.1...v2.6.1.1)
