@@ -42,8 +42,8 @@
 	skip
 [file ".editorconfig"]
 	url = https://github.com/devlooped/oss/blob/main/.editorconfig
-	sha = c779d3d4e468358106dea03e93ba2cd35bb01ecb
-	etag = 7298c6450967975a8782b5c74f3071e1910fc59686e48f9c9d5cd7c68213cf59
+	sha = a62c45934ac2952f2f5d54d8aea4a7ebc1babaff
+	etag = b5e919b472a52d4b522f86494f0f2c0ba74a6d9601454e20e4cbaf744317ff62
 	weak
 [file ".gitattributes"]
 	url = https://github.com/devlooped/oss/blob/main/.gitattributes
@@ -93,8 +93,8 @@
 	weak
 [file "src/Directory.Build.props"]
 	url = https://github.com/devlooped/oss/blob/main/src/Directory.Build.props
-	sha = c509be4378ff6789df4f66338cb88119453c0975
-	etag = cbbdc1a4d3030f353f3e5306a6c380238dd4ed0945aad2d56ba87b49fcfcd66d
+	sha = 0ff8b7b79a82112678326d1dc5543ed890311366
+	etag = 3ebde0a8630d526b80f15801179116e17a857ff880a4442e7db7b075efa4fd63
 	weak
 [file "src/Directory.Build.targets"]
 	url = https://github.com/devlooped/oss/blob/main/src/Directory.Build.targets
@@ -116,8 +116,8 @@
 	weak
 [file ".github/workflows/includes.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/includes.yml
-	sha = 85829f2510f335f4a411867f3dbaaa116c3ab3de
-	etag = 086f6b6316cc6ea7089c0dcc6980be519e6ed6e6201e65042ef41b82634ec0ee
+	sha = 06628725a6303bb8c4cf3076a384fc982a91bc0b
+	etag = 478f91d4126230e57cc601382da1ba23f9daa054645b4af89800d8dd862e64fd
 	weak
 [file ".github/workflows/combine-prs.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/combine-prs.yml
@@ -453,8 +453,8 @@
 	weak
 [file "src/Core/Authentication/OAuth/OAuth2SystemWebBrowser.cs"]
 	url = https://github.com/git-ecosystem/git-credential-manager/blob/main/src/shared/Core/Authentication/OAuth/OAuth2SystemWebBrowser.cs
-	sha = c91294385db910f8dd15c0345e100cd034e6482f
-	etag = f1dfa70e7f6096ef5a0fccc3d3737bcb4e22089dfeeb2afc6b3e722ca40da888
+	sha = a344fe937a566311330e824b1042d9d3de694531
+	etag = 3e8f40f52c87f233dc0263140fd735f64d1d2f46793eaf006ab226973b83712c
 	weak
 [file "src/Core/Authentication/OAuth/OAuth2TokenResult.cs"]
 	url = https://github.com/git-ecosystem/git-credential-manager/blob/main/src/shared/Core/Authentication/OAuth/OAuth2TokenResult.cs
@@ -740,4 +740,9 @@
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-env.yml
 	sha = 77e83f238196d2723640abef0c7b6f43994f9747
 	etag = fcb9759a96966df40dcd24906fd328ddec05953b7e747a6bb8d0d1e4c3865274
+	weak
+[file ".github/workflows/dotnet-file-core.yml"]
+	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-file-core.yml
+	sha = d00364faaa84c414b868c0758b9e1a5fc0520dcc
+	etag = d3b7d8ca69e6d22066a2348f02b409e2d6fb900f5039f68940c14e4ce6021826
 	weak
