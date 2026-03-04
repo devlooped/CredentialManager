@@ -3,15 +3,11 @@
 
 [![Version](https://img.shields.io/nuget/vpre/Devlooped.CredentialManager.svg?color=royalblue)](https://www.nuget.org/packages/Devlooped.CredentialManager)
 [![Downloads](https://img.shields.io/nuget/dt/Devlooped.CredentialManager.svg?color=green)](https://www.nuget.org/packages/Devlooped.CredentialManager)
+[![EULA](https://img.shields.io/badge/EULA-OSMF-blue?labelColor=black&color=C9FF30)](https://github.com/devlooped/CredentialManager/blob/main/osmfeula.txt)
 [![License](https://img.shields.io/github/license/devlooped/CredentialManager.svg?color=blue)](https://github.com/devlooped/CredentialManager/blob/main/license.txt)
-[![Build](https://github.com/devlooped/CredentialManager/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/CredentialManager/actions)
 
 <!-- #content -->
-<!-- include https://github.com/devlooped/.github/raw/main/sponsorlink.md -->
-*This project uses [SponsorLink](https://github.com/devlooped#sponsorlink) 
-and may issue IDE-only warnings if no active sponsorship is detected.*
-
-<!-- https://github.com/devlooped/.github/raw/main/sponsorlink.md -->
+<!-- include https://github.com/devlooped/.github/raw/main/osmf.md -->
 
 Packages the official [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
 implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies.

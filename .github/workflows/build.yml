@@ -92,6 +92,7 @@ jobs:
     env:
       Version: ${{ needs.version.outputs.version }}
       VersionLabel: ${{ needs.version.outputs.label }}
+      VersionPrefix: ${{ needs.version.outputs.prefix }}
     steps:
       - name: 🤘 checkout
         uses: actions/checkout@v4
