@@ -66,7 +66,6 @@ namespace GitCredentialManager.Interop.MacOS
                         if (typeId == CFArrayGetTypeID())
                         {
                             int len = (int)CFArrayGetCount(resultPtr);
-                            // NOTE: removed len from HashSet ctor since it's not supported in NS2.0
                             var accounts = new HashSet<string>();
                             for (int i = 0; i < len; i++)
                             {
@@ -303,35 +302,18 @@ namespace GitCredentialManager.Interop.MacOS
                 return null;
             }
 
-            IntPtr buffer = IntPtr.Zero;
-            try
+            if (CFDictionaryGetValueIfPresent(dict, key, out IntPtr value) && value != IntPtr.Zero)
             {
-                if (CFDictionaryGetValueIfPresent(dict, key, out IntPtr value) && value != IntPtr.Zero)
+                if (CFGetTypeID(value) == CFStringGetTypeID())
                 {
-                    if (CFGetTypeID(value) == CFStringGetTypeID())
-                    {
-                        int stringLength = (int)CFStringGetLength(value);
-                        int bufferSize = stringLength + 1;
-                        buffer = Marshal.AllocHGlobal(bufferSize);
-                        if (CFStringGetCString(value, buffer, bufferSize, CFStringEncoding.kCFStringEncodingUTF8))
-                        {
-                            return Marshal.PtrToStringAuto(buffer, stringLength);
-                        }
-                    }
-
-                    if (CFGetTypeID(value) == CFDataGetTypeID())
-                    {
-                        int length = CFDataGetLength(value);
-                        IntPtr ptr = CFDataGetBytePtr(value);
-                        return Marshal.PtrToStringAuto(ptr, length);
-                    }
+                    return CFStringToString(value);
                 }
-            }
-            finally
-            {
-                if (buffer != IntPtr.Zero)
+
+                if (CFGetTypeID(value) == CFDataGetTypeID())
                 {
-                    Marshal.FreeHGlobal(buffer);
+                    int length = CFDataGetLength(value);
+                    IntPtr ptr = CFDataGetBytePtr(value);
+                    return Marshal.PtrToStringAuto(ptr, length);
                 }
             }
 
