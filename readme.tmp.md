@@ -1,12 +1,10 @@
-![Icon](https://raw.githubusercontent.com/devlooped/CredentialManager/main/assets/images/gcm.png) Git Credential Manager Lib
-============
+# {{PROJECT_NAME}}
 
-[![Version](https://img.shields.io/nuget/vpre/Devlooped.CredentialManager.svg?color=royalblue)](https://www.nuget.org/packages/Devlooped.CredentialManager)
-[![Downloads](https://img.shields.io/nuget/dt/Devlooped.CredentialManager.svg?color=green)](https://www.nuget.org/packages/Devlooped.CredentialManager)
-[![EULA](https://img.shields.io/badge/EULA-OSMF-blue?labelColor=black&color=C9FF30)](https://github.com/devlooped/CredentialManager/blob/main/osmfeula.txt)
-[![License](https://img.shields.io/github/license/devlooped/CredentialManager.svg?color=blue)](https://github.com/devlooped/CredentialManager/blob/main/license.txt)
+[![Version](https://img.shields.io/nuget/vpre/{{PACKAGE_ID}}.svg?color=royalblue)](https://www.nuget.org/packages/{{PACKAGE_ID}})
+[![Downloads](https://img.shields.io/nuget/dt/{{PACKAGE_ID}}.svg?color=darkmagenta)](https://www.nuget.org/packages/{{PACKAGE_ID}})
+[![EULA](https://img.shields.io/badge/EULA-OSMF-blue?labelColor=black&color=C9FF30)](https://github.com/devlooped/oss/blob/main/osmfeula.txt)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/devlooped/oss/blob/main/license.txt)
 
-<!-- #content -->
 <!-- include https://github.com/devlooped/.github/raw/main/osmf.md -->
 ## Open Source Maintenance Fee
 
@@ -19,60 +17,11 @@ To pay the Maintenance Fee, [become a Sponsor](https://github.com/sponsors/devlo
 OSMF tier. A single fee covers all of [Devlooped packages](https://www.nuget.org/profiles/Devlooped).
 
 <!-- https://github.com/devlooped/.github/raw/main/osmf.md -->
-
-Packages the official [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/) cross-platform credential store 
-implementation supporting Windows, macOS and Linux for use as a NS2.0 library with no UI or external dependencies.
-
-Release version numbers track the [GCM releases](https://github.com/GitCredentialManager/git-credential-manager/releases) themselves.
-
-## Usage
-
-```csharp
-using GitCredentialManager;
-...
-
-ICredentialStore store = CredentialManager.Create("myapp");
-
-// Store a credential
-store.AddOrUpdate("https://foo.com", "myusr", "mypwd");
-
-// Retrieve a credential
-ICredential cred = store.Get("https://foo.com", "myusr");
-
-Assert.Equal("myusr", cred.Account);
-Assert.Equal("mypwd", cred.Password);
-```
-
-The namespace for the `CredentialManager` static factory class is the same as the official GCM itself 
-for convenience: `GitCredentialManager`.
-
-The optional *namespace* argument (`myapp` above) can be used to scope credential 
-operations to your own app/service.
-
-The library targets .NET Standard 2.0 for broad applicability.
-
-Supported [credential stores](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md) and their 
-configuration is shared with the GCM project itself.
-
-
-> [!IMPORTANT]
-> If you use Git's built-in credential cache, a working installation of git 
-> is required. See [GCM docs](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md#gits-built-in-credential-cache).
-
 <!-- #content -->
-
-## Releasing
-
-To create a new release:
-1. Find & replace the latest release tag in this project to the desired release tag in 
-   the [git-credential-manager](https://github.com/git-ecosystem/git-credential-manager/releases) project 
-   in the .netconfig file
-2. Run `dotnet file sync -c:$env:TEMP\dotnet-file.md`
-3. Use the contents of the generated file to update the release notes in the GitHub release. 
-   If no useful notes were generated, just copy the GCM ones.
-4. Create a PR like [this one](https://github.com/devlooped/CredentialManager/pull/111)
-5. Once merged, create a matching release in this project.
-
+## Usage
+*{{PROJECT_NAME}}*
+<!-- #content -->
+---
 <!-- include https://github.com/devlooped/sponsors/raw/main/footer.md -->
 # Sponsors 
 
