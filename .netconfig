@@ -73,8 +73,8 @@
 	skip
 [file ".gitignore"]
 	url = https://github.com/devlooped/oss/blob/main/.gitignore
-	sha = 3776526342afb3f57da7e80f2095e5fdca3c31c9
-	etag = 11767f73556aa4c6c8bcc153b77ee8e8114f99fa3b885b0a7d66d082f91e77b3
+	sha = a225b7a9f609f26bcc24e0d84f663387be251a7d
+	etag = 20a8b49d57024abbd85aac5b0020c30e5eb68e0384b2761e93727c8780c4a991
 	weak
 [file "Directory.Build.rsp"]
 	url = https://github.com/devlooped/oss/blob/main/Directory.Build.rsp
@@ -758,4 +758,14 @@
 	url = https://github.com/git-ecosystem/git-credential-manager/blob/v2.7.0/src/shared/Core/Authentication/OAuth/OAuth2SystemWebBrowser.cs
 	sha = c91294385db910f8dd15c0345e100cd034e6482f
 	etag = f1dfa70e7f6096ef5a0fccc3d3737bcb4e22089dfeeb2afc6b3e722ca40da888
+	weak
+[file "oss.cs"]
+	url = https://github.com/devlooped/oss/blob/main/oss.cs
+	sha = 9c2f8c729d7cd3dd052b5a09d12fb1f3926247e5
+	etag = e195cacdb0c6ea7ca768514ec94f8595d008c7f5aae805b39beec330895045e3
+	weak
+[file "readme.tmp.md"]
+	url = https://github.com/devlooped/oss/blob/main/readme.tmp.md
+	sha = 2cc4ada8059b1e2e3f32089e67dab27a8ddeb7fb
+	etag = c7c0694bd13d2d7fdc8b0530c80d5cf032cb9fdaaa5e1f814e951e9e6489746a
 	weak
